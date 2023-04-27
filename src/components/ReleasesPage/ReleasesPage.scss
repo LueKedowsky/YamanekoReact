@@ -1,0 +1,16 @@
+@import "../../data/assets/scssData/scssVars.scss";
+
+.releases- {
+  &container {
+    background-color: $dark-bg;
+    &-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &banner {
+    padding: 20px 450px;
+  }
+}

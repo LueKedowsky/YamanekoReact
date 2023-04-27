@@ -20,7 +20,7 @@ header {
   justify-self: auto;
 
   /* max-width: 1300px; */
-  min-width: 100%;
+  // min-width: 100%;
   max-height: 75px;
   height: 100%;
   margin: 0px auto;
@@ -42,13 +42,13 @@ header {
 .logo a,
 .logo a:active,
 .logo a:hover,
-.logo a:visited{
+.logo a:visited {
   text-decoration: none;
-  color: #FFFFFF
+  color: #ffffff;
 }
 
 .search input {
-  background-image: url("../../data/assets/icons/zalupa.svg");
+  background-image: url("../../data/assets/icons/lupa.svg");
   background-repeat: no-repeat;
   background-position-x: 10px;
   background-position-y: center;
@@ -59,7 +59,7 @@ header {
   font-size: 16px;
 }
 
-.search input[type="text"]:hover:active:focus{
+.search input[type="text"]:hover:active:focus {
   border: none;
   text-decoration: none;
 }
@@ -83,7 +83,6 @@ header {
   color: #fff;
 }
 
-
 /* Dropdown Button */
 .dropbtn {
   font-family: "Mulish";
@@ -100,12 +99,13 @@ header {
   align-items: center;
 }
 
-.dropbtn img{
+.dropbtn img {
   margin: auto 5px;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
   cursor: pointer;
 }
 
@@ -123,7 +123,7 @@ header {
   right: 8px;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -136,22 +136,26 @@ header {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}
 
-.sign-in{
+.sign-in {
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: auto;
   height: 30px;
-  margin-top: 6.5px;
+  margin-top: 6px;
   padding: 5px;
 
-  background: linear-gradient(274.27deg, #FF705F 11.62%, #CD3737 80.84%);
+  background: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
   border-radius: 13px;
 }
 
@@ -163,4 +167,3 @@ header {
   text-decoration: none;
   color: #fff;
 }
-

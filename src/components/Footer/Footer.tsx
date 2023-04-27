@@ -6,10 +6,10 @@ const Footer = () => {
       <footer className="footer">
     <div className="footer-wrapper">
         <div className="social-links">
-            <a href="#"><img src="/assets/icons/Instagram.svg" alt="inst" /></a>
-            <a href="#"><img src="/assets/icons/Discord.svg" alt="dis" /></a>
-            <a href="#"><img src="/assets/icons/Telegram.svg" alt="tg" /></a>
-            <a href="#"><img src="/assets/icons/YouTube.svg" alt="yt" /></a>
+            <a href="#"><img src="../../data/assets/icons/Instagram.svg" alt="inst" /></a>
+            <a href="#"><img src="../../data/assets/icons/Discord.svg" alt="disc" /></a>
+            <a href="#"><img src="../../data/assets/icons/Telegram.svg" alt="tg" /></a>
+            <a href="#"><img src="../../data/assets/icons/YouTube.svg" alt="yt" /></a>
         </div>
         <div className="logo">
             <p>YAMANEKO</p>

@@ -1,0 +1,64 @@
+@import "../../data/assets/scssData/scssVars.scss";
+
+.single-release- {
+  &container {
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 1300px;
+    background-color: $dark-bg;
+    padding: 20px 2px;
+    &--left {
+      margin-right: 20px;
+    }
+    &--right {
+      margin-top: 8px;
+    }
+  }
+  &poster {
+    max-height: 300px;
+    max-width: 220px;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &--img {
+      height: 300px;
+      width: 220px;
+      transition: 0.6s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &title-- {
+    &ru {
+      @extend %mulish20;
+      font-weight: bold;
+      color: #fff;
+    }
+    &orig {
+      @extend %mulish14;
+      color: rgba(255, 255, 255, 0.58);
+    }
+  }
+  &genre-list {
+    @extend %mulish14;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &--item {
+      background-color: rgba(255, 255, 255, 0.87);
+      margin-right: 10px;
+      padding: 2px 10px;
+    }
+  }
+  &description {
+    @extend %mulish14;
+    color: #fff;
+    max-width: 660px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+}
