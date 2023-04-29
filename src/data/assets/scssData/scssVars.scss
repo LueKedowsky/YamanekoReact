@@ -18,3 +18,13 @@ $dark-bg: #2b2b2b;
   font-size: 20px;
   line-height: 25px;
 }
+
+%linkClear {
+  & a,
+  & a:active,
+  & a:hover,
+  & a:visited {
+    text-decoration: none;
+    color: #ffffff;
+  }
+}

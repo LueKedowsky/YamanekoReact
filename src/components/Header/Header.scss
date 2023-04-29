@@ -1,169 +1,75 @@
-header {
+@import "../../data/assets/scssData/scssVars.scss";
+
+.header-container {
   position: sticky;
   top: 0px;
   z-index: 999;
   background: black;
 
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 25px;
+  @extend %mulish20;
   color: #f6f6f6;
-}
 
-.container-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   justify-self: auto;
 
-  /* max-width: 1300px; */
-  // min-width: 100%;
-  max-height: 75px;
-  height: 100%;
-  margin: 0px auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
+  height: 75px;
+  // padding-left: 32px;
+  // padding-right: 32px;
+  // padding-top: 16px;
+  // padding-bottom: 16px;
 
-.logo {
-  font-family: Belgro;
-  font-size: 32px;
-  margin-right: 30px;
+  &-logo {
+    font-family: Belgro;
+    font-size: 32px;
+    margin-right: 30px;
 
-  display: flex;
-  align-items: center;
-}
+    display: flex;
+    align-items: center;
 
-.logo a,
-.logo a:active,
-.logo a:hover,
-.logo a:visited {
-  text-decoration: none;
-  color: #ffffff;
-}
+    @extend %linkClear;
+  }
+  &-search {
+    &__input {
+      background-image: url("../../data/assets/icons/lupa.svg");
+      background-repeat: no-repeat;
+      background-position-x: 10px;
+      background-position-y: center;
+      height: 40px;
+      width: 400px;
+      padding-left: 40px;
+      border-radius: 2px;
+      font-size: 16px;
+      border: none;
+      text-decoration: none;
+      &:hover,
+      &:active,
+      &:focus {
+        border: none;
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
+  &-navigation__ {
+    &ul {
+      padding: 20px;
+      @extend %linkClear;
+    }
+    &li {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+  &-sign-in {
+    height: 30px;
+    padding: 5px 20px;
+    margin-right: 30px;
 
-.search input {
-  background-image: url("../../data/assets/icons/lupa.svg");
-  background-repeat: no-repeat;
-  background-position-x: 10px;
-  background-position-y: center;
-  width: 400px;
-  height: 100%;
-  border-radius: 2px;
-  padding-left: 40px;
-  font-size: 16px;
-}
-
-.search input[type="text"]:hover:active:focus {
-  border: none;
-  text-decoration: none;
-}
-
-.container-header ul li {
-  padding: 20px;
-}
-
-.container-header li {
-  display: inline-block;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.navigation a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Dropdown Button */
-.dropbtn {
-  font-family: "Mulish";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-
-  background-color: transparent;
-  color: #f6f6f6;
-  border: none;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-}
-
-.dropbtn img {
-  margin: auto 5px;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover,
-.dropbtn:focus {
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  left: 8px;
-  right: 8px;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
-  display: block;
-}
-
-.sign-in {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: auto;
-  height: 30px;
-  margin-top: 6px;
-  padding: 5px;
-
-  background: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
-  border-radius: 13px;
-}
-
-.sign-in p {
-  font-size: 16px;
-}
-
-.sign-in a {
-  text-decoration: none;
-  color: #fff;
+    background: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
+    border-radius: 13px;
+  }
+  @extend %linkClear;
 }
