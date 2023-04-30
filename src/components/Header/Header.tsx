@@ -23,7 +23,8 @@ const Header = () => {
           <li className="header-container-navigation__li">
             <NavLink to="/support">Поддержка</NavLink>
           </li>
-          {/* <li className="dropdown">
+          {/* реализовать выпадающее меню со ссылками
+          <li className="dropdown">
             <button className="dropbtn">
               Социальные сети
               <img className="dropbtn" src="../../data/assets/icons/select_button.svg" alt="" />

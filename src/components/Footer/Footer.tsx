@@ -1,28 +1,38 @@
-import './Footer.scss'
+import "./Footer.scss";
+import instagramIcon from "../../data/assets/icons/Instagram.svg";
+import discordIcon from "../../data/assets/icons/Discord.svg";
+import telegramIcon from "../../data/assets/icons/Telegram.svg";
+import youtubeIcon from "../../data/assets/icons/YouTube.svg";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
-      <footer className="footer">
-    <div className="footer-wrapper">
-        <div className="social-links">
-            <a href="#"><img src="../../data/assets/icons/Instagram.svg" alt="inst" /></a>
-            <a href="#"><img src="../../data/assets/icons/Discord.svg" alt="disc" /></a>
-            <a href="#"><img src="../../data/assets/icons/Telegram.svg" alt="tg" /></a>
-            <a href="#"><img src="../../data/assets/icons/YouTube.svg" alt="yt" /></a>
-        </div>
-        <div className="logo">
-            <p>YAMANEKO</p>
-        </div>
-        <div className="copyright">
-            <p>"YAMANEKO" — команда, занимающаяся переводом и озвучиванием зарубежной киноиндустрии на русский язык.</p>
-            <p>В случае нарушения авторских прав - обращайтесь на почту: yamaneko.response@gmail.com</p>
-            <p>&#169; 2020 - 2022 «YAMANEKO» Разработано Monashka & Dragomore & LueKedowsky</p>
-        </div>
-    </div>
-</footer>
-    </div>
-  )
-}
+    <footer className="footer-container">
+      <div className="footer-container-social">
+        <a className="footer-container-social__link" href="#">
+          <img src={instagramIcon} alt="inst" />
+        </a>
+        <a className="footer-container-social__link" href="#">
+          <img src={discordIcon} alt="disc" />
+        </a>
+        <a className="footer-container-social__link" href="#">
+          <img src={telegramIcon} alt="tg" />
+        </a>
+        <a className="footer-container-social__link" href="#">
+          <img src={youtubeIcon} alt="yt" />
+        </a>
+      </div>
+      <div className="footer-container-logo">
+        <p className="footer-container-logo__text">YAMANEKO</p>
+      </div>
+      <div className="footer-container-copyright">
+        <p className="footer-container-copyright__text">
+          "YAMANEKO" — команда, занимающаяся переводом и озвучиванием зарубежной киноиндустрии на русский язык.
+        </p>
+        <p className="footer-container-copyright__text">В случае нарушения авторских прав - обращайтесь на почту: yamaneko.response@gmail.com</p>
+        <p className="footer-container-copyright__text">&#169; 2020 - 2022 «YAMANEKO» Разработано Monashka & Dragomore & LueKedowsky</p>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

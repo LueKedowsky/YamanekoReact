@@ -1,4 +1,4 @@
-@import "../../data/assets/scssData/scssVars.scss";
+@import "../../../data/assets/scssData/scssVars.scss";
 
 .single-release- {
   &container {
@@ -14,6 +14,7 @@
     &--right {
       margin-top: 8px;
     }
+    @extend %linkClear;
   }
   &poster {
     max-height: 300px;

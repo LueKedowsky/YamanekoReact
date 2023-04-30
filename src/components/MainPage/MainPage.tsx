@@ -1,5 +1,5 @@
-import LastReleases from "../LastReleases/LastReleases";
-import NewsBlock from "../NewsBlock/NewsBlock";
+import LastReleases from "./LastReleases/LastReleases";
+import NewsBlock from "./NewsBlock/NewsBlock";
 
 const MainPage = () => {
   return (

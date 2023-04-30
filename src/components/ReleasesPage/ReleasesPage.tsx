@@ -1,4 +1,4 @@
-import SingleRelease from "../SingleRelease/SingleRelease";
+import SingleRelease from "./SingleRelease/SingleRelease";
 import "./ReleasesPage.scss";
 import data from "../../data/tempData/data.json";
 import { SingleReleaseDataType } from "../../Types/dataTypes";

@@ -11,6 +11,13 @@ $dark-bg: #2b2b2b;
   font-size: 16px;
 }
 
+%mulish16 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 %mulish20 {
   font-family: "Mulish";
   font-style: normal;
@@ -27,4 +34,12 @@ $dark-bg: #2b2b2b;
     text-decoration: none;
     color: #ffffff;
   }
+}
+
+%logoStyles {
+  font-family: "Belgro";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  color: #fff;
 }
