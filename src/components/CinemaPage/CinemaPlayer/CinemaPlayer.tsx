@@ -1,6 +1,6 @@
 import React from "react";
 
-const CinemaPlayer = () => {
+const CinemaPlayer: React.FC = () => {
   return <div>CinemaPlayer</div>;
 };
 

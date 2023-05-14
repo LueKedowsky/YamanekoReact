@@ -4,20 +4,20 @@ import discordIcon from "../../data/assets/icons/Discord.svg";
 import telegramIcon from "../../data/assets/icons/Telegram.svg";
 import youtubeIcon from "../../data/assets/icons/YouTube.svg";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="footer-container">
       <div className="footer-container-social">
-        <a className="footer-container-social__link" href="#">
+        <a className="footer-container-social__link" href="https://google.com">
           <img src={instagramIcon} alt="inst" />
         </a>
-        <a className="footer-container-social__link" href="#">
+        <a className="footer-container-social__link" href="https://google.com">
           <img src={discordIcon} alt="disc" />
         </a>
-        <a className="footer-container-social__link" href="#">
+        <a className="footer-container-social__link" href="https://google.com">
           <img src={telegramIcon} alt="tg" />
         </a>
-        <a className="footer-container-social__link" href="#">
+        <a className="footer-container-social__link" href="https://google.com">
           <img src={youtubeIcon} alt="yt" />
         </a>
       </div>

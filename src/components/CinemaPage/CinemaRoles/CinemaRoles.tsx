@@ -1,6 +1,6 @@
 import React from "react";
 
-const CinemaRoles = () => {
+const CinemaRoles: React.FC = () => {
   return <div>CinemaRoles</div>;
 };
 

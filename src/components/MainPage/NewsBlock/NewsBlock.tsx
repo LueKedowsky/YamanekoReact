@@ -1,6 +1,6 @@
 import "./NewsBlock.scss";
 
-const NewsBlock = () => {
+const NewsBlock: React.FC = () => {
   return (
     <div className="news-container">
       <div className="news-wrapper">

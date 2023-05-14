@@ -3,7 +3,7 @@ import "./ReleasesPage.scss";
 import data from "../../data/tempData/data.json";
 import { SingleReleaseDataType } from "../../Types/dataTypes";
 
-const ReleasesPage = () => {
+const ReleasesPage: React.FC = () => {
   const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
   return (
     <div className="releases-container">
