@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import MainPage from "./components/MainPage/MainPage";
@@ -11,7 +11,8 @@ import CinemaPage from "./components/CinemaPage/CinemaPage";
 function App() {
   const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const titleLinks = releaseData.map((item) => <Link to={item.titleLink} />);
+  // const titleLinks = releaseData.map((item) => item.titleLink);
+  // console.log(titleLinks);
 
   return (
     <div className="App">
@@ -19,7 +20,25 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/releases" element={<ReleasesPage />} />
-        <Route path=":titleLinks" element={<CinemaPage />} />
+        {/* <Route path=":titleLinks" element={<CinemaPage props={releaseData} />} /> */}
+        {releaseData.map(({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, releaseDesctiprion }) => (
+          <Route
+            key={id}
+            path={titleLink}
+            element={
+              <CinemaPage
+                itemId={id}
+                titleLink={titleLink}
+                releasePoster={releasePoster}
+                releaseTrailer={releaseTrailer}
+                releaseTitleRu={releaseTitleRu}
+                releaseTitleOrig={releaseTitleOrig}
+                releaseGenresList={releaseGenresList}
+                releaseDesctiprion={releaseDesctiprion}
+              />
+            }
+          />
+        ))}
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />

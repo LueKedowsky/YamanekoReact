@@ -12,7 +12,7 @@ const ReleasesPage: React.FC = () => {
       </div>
       <main className="releases-container-main">
         {releaseData.map((props) => {
-          return <SingleRelease {...props} />;
+          return <SingleRelease key={props.id} {...props} />;
         })}
       </main>
     </div>
