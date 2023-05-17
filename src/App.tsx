@@ -21,24 +21,27 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/releases" element={<ReleasesPage />} />
         {/* <Route path=":titleLinks" element={<CinemaPage props={releaseData} />} /> */}
-        {releaseData.map(({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, releaseDesctiprion }) => (
-          <Route
-            key={id}
-            path={titleLink}
-            element={
-              <CinemaPage
-                itemId={id}
-                titleLink={titleLink}
-                releasePoster={releasePoster}
-                releaseTrailer={releaseTrailer}
-                releaseTitleRu={releaseTitleRu}
-                releaseTitleOrig={releaseTitleOrig}
-                releaseGenresList={releaseGenresList}
-                releaseDesctiprion={releaseDesctiprion}
-              />
-            }
-          />
-        ))}
+        {releaseData.map(
+          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, releaseDesctiprion }) => (
+            <Route
+              key={id}
+              path={titleLink}
+              element={
+                <CinemaPage
+                  itemId={id}
+                  titleLink={titleLink}
+                  releasePoster={releasePoster}
+                  releaseTrailer={releaseTrailer}
+                  releaseTitleRu={releaseTitleRu}
+                  releaseTitleOrig={releaseTitleOrig}
+                  releaseGenresList={releaseGenresList}
+                  screenshots={screenshots}
+                  releaseDesctiprion={releaseDesctiprion}
+                />
+              }
+            />
+          )
+        )}
         <Route path="*" element={<Page404 />} />
       </Routes>
       <Footer />

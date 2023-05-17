@@ -1,11 +1,12 @@
 import "./NewsBlock.scss";
+import newsIcon from "../../../data/assets/icons/news.png";
 
 const NewsBlock: React.FC = () => {
   return (
     <div className="news-container">
       <div className="news-wrapper">
         <div className="news">
-          <img src="../assets/icons/news.png" alt="NEWS" className="news-icon" />
+          <img src={newsIcon} alt="NEWS" className="news-icon" />
           <div className="news-row">
             <div className="news-block news-block-1">
               <p>Block 1</p>

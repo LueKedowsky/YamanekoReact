@@ -1,0 +1,45 @@
+@import "../../../data/assets/scssData/scssVars.scss";
+
+.cinemaInfo- {
+  &container {
+    max-width: 1300px;
+    margin: auto;
+  }
+  &flexcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &switchers {
+    &.active {
+      background: $yamaPink;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    &_img {
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid black;
+    }
+  }
+  &title {
+    @extend %oswald36;
+  }
+  &description {
+    @extend %mulish14;
+    max-width: 600px;
+  }
+  &screenshots {
+    &_screenshot {
+      width: 480px;
+      height: 250px;
+      -webkit-box-shadow: 10px 10px 0px 0px #383838;
+      -moz-box-shadow: 10px 10px 0px 0px #383838;
+      box-shadow: 10px 10px 0px 0px #383838;
+    }
+  }
+}

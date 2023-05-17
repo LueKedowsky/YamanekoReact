@@ -6,5 +6,6 @@ export type SingleReleaseDataType = {
   releaseTitleRu: string,
   releaseTitleOrig: string,
   releaseGenresList: string[],
+  screenshots: string[],
   releaseDesctiprion: string
 }

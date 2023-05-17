@@ -1,5 +1,7 @@
 import React from "react";
 import CinemaTrailer from "./CinemaTrailer/CinemaTrailer";
+import CinemaPlayer from "./CinemaPlayer/CinemaPlayer";
+import CinemaInfo from "./CinemaInfo/CinemaInfo";
 
 const CinemaPage: React.FC<any> = ({
   itemId,
@@ -9,13 +11,16 @@ const CinemaPage: React.FC<any> = ({
   releaseTitleRu,
   releaseTitleOrig,
   releaseGenresList,
+  screenshots,
   releaseDesctiprion,
 }) => {
   console.log(itemId, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, releaseDesctiprion);
 
   return (
     <div>
-      <CinemaTrailer releaseTrailer={releaseTrailer} />
+      <CinemaTrailer releaseTrailer={releaseTrailer} releaseTitleRu={releaseTitleRu} />
+      <CinemaPlayer />
+      <CinemaInfo releaseDesctiprion={releaseDesctiprion} screenshots={screenshots} />
     </div>
   );
 };
