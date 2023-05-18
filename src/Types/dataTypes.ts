@@ -7,5 +7,12 @@ export type SingleReleaseDataType = {
   releaseTitleOrig: string,
   releaseGenresList: string[],
   screenshots: string[],
+  roles: RolesType[],
   releaseDesctiprion: string
+}
+
+export type RolesType = {
+  name: string,
+  picture: string,
+  dubber: string,
 }

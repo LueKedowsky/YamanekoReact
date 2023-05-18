@@ -22,7 +22,7 @@ function App() {
         <Route path="/releases" element={<ReleasesPage />} />
         {/* <Route path=":titleLinks" element={<CinemaPage props={releaseData} />} /> */}
         {releaseData.map(
-          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, releaseDesctiprion }) => (
+          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, roles, releaseDesctiprion }) => (
             <Route
               key={id}
               path={titleLink}
@@ -36,6 +36,7 @@ function App() {
                   releaseTitleOrig={releaseTitleOrig}
                   releaseGenresList={releaseGenresList}
                   screenshots={screenshots}
+                  roles={roles}
                   releaseDesctiprion={releaseDesctiprion}
                 />
               }

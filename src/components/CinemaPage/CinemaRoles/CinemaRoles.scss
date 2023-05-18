@@ -1,0 +1,37 @@
+@import "../../../data/assets/scssData/scssVars.scss";
+
+.cinemaRoles- {
+  &container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  &roles {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0;
+    margin: 20px 0;
+    &_role {
+      &--img-wrap {
+        position: relative;
+        &:hover .cinemaRoles-roles_role-description {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      &-description {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: rgba(29, 106, 154, 0.72);
+        color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s, visibility 0.2s;
+      }
+    }
+  }
+}
