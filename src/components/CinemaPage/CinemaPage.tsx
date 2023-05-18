@@ -16,13 +16,29 @@ const CinemaPage: React.FC<any> = ({
   roles,
   releaseDesctiprion,
 }) => {
-  console.log(itemId, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, roles, releaseDesctiprion);
+  console.log(
+    itemId,
+    titleLink,
+    releasePoster,
+    releaseTrailer,
+    releaseTitleRu,
+    releaseTitleOrig,
+    releaseGenresList,
+    roles,
+    releaseDesctiprion
+  );
 
   return (
     <div>
-      <CinemaTrailer releaseTrailer={releaseTrailer} releaseTitleRu={releaseTitleRu} />
-      <CinemaPlayer />
-      <CinemaInfo releaseDesctiprion={releaseDesctiprion} screenshots={screenshots} />
+      <CinemaTrailer
+        releaseTrailer={releaseTrailer}
+        releaseTitleRu={releaseTitleRu}
+      />
+      <CinemaPlayer propsID="player1" />
+      <CinemaInfo
+        releaseDesctiprion={releaseDesctiprion}
+        screenshots={screenshots}
+      />
       <CinemaRoles roles={roles} />
     </div>
   );
