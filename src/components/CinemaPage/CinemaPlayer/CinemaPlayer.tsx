@@ -2,10 +2,10 @@ import React from "react";
 import "./CinemaPlayer.scss";
 import ReactPlayer from "react-player";
 
-const CinemaPlayer: React.FC = () => {
+const CinemaPlayer: React.FC<any> = ({ toPlayerRef }) => {
   return (
     <div className="cinemaPlayer-container">
-      <div className="cinemaPlayer-video-archon" id="video-archon"></div>
+      <div className="cinemaPlayer-video-archon" ref={toPlayerRef}></div>
       <div className="cinemaPlayer-devider">
         <div className="cinemaPlayer-devider--inner"></div>
       </div>
