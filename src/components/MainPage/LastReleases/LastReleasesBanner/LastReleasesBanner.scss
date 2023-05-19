@@ -1,0 +1,14 @@
+@import "../../../../data/assets/scssData/scssVars.scss";
+
+.releasesBanner- {
+  &container {
+    max-width: 1300px;
+  }
+  &banner {
+    padding: 30px 0px;
+    &_img {
+      max-width: 1280px;
+      max-height: 320px;
+    }
+  }
+}

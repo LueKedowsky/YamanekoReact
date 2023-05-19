@@ -1,0 +1,47 @@
+@import "../../../data/assets/scssData/scssVars.scss";
+
+.lastReleases- {
+  &container {
+    background-image: url("../../../data/assets/icons/release_bg.png");
+    &--inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+  }
+  &title {
+    @extend %oswald36;
+    color: white;
+    margin-left: 74px;
+    margin-bottom: 30px;
+  }
+  &releases {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    &_item {
+      margin: 15px;
+      &-poster {
+        margin-bottom: 10px;
+        max-height: 300px;
+        max-width: 220px;
+        overflow: hidden;
+        border-radius: 3px;
+        &_img {
+          height: 300px;
+          width: 220px;
+          transition: 0.6s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+      &-title {
+        @extend %mulish16;
+        color: white;
+        max-width: 220px;
+        text-align: center;
+      }
+    }
+  }
+}
