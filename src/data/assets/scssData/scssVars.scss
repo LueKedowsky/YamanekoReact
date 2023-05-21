@@ -67,3 +67,9 @@ $pink-gradient: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
   font-size: 32px;
   color: #fff;
 }
+
+%flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

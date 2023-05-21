@@ -23,7 +23,7 @@ function App() {
         <Route path="/releases" element={<ReleasesPage />} />
         <Route path="/sign-in" element={<SignIn />} />
         {releaseData.map(
-          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, roles, releaseDesctiprion }) => (
+          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, roles, releaseDesctiption }) => (
             <Route
               key={id}
               path={titleLink}
@@ -38,7 +38,7 @@ function App() {
                   releaseGenresList={releaseGenresList}
                   screenshots={screenshots}
                   roles={roles}
-                  releaseDesctiprion={releaseDesctiprion}
+                  releaseDesctiption={releaseDesctiption}
                 />
               }
             />

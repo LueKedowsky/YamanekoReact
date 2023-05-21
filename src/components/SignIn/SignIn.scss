@@ -2,17 +2,39 @@
 
 .signIn- {
   &container {
+    color: #fff;
+    @extend %mulish16;
     background-color: #111;
+    min-height: 700px;
     &--inner {
       display: flex;
+      align-items: flex-start;
+      justify-content: center;
       max-width: 1300px;
       margin: 0 auto;
+      padding-top: 50px;
     }
     &--left {
       position: relative;
     }
     &--right {
+      min-height: 501px;
+      width: 400px;
       background-color: #1c1c1c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &form-title {
+    padding-top: 20px;
+    @extend %mulish20;
+  }
+  &formik {
+    &_error {
+      color: $yamaPink;
+      padding-left: 20px;
     }
   }
   &overlay {
@@ -21,21 +43,20 @@
     right: 0;
     bottom: 0;
     top: 0;
-    text-align: center;
     max-width: 1000px;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
+    @extend %flexCenter;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.72);
     &_title {
       @extend %mulish60;
       color: #fff;
+      margin-top: -200px;
+      margin-bottom: 50px;
+      text-shadow: 5px 5px 3px #121212;
     }
     &_subtitle {
       @extend %mulish14;
+      text-shadow: 3px 3px 2px #232323;
       color: grey;
     }
   }
@@ -49,11 +70,20 @@
   &fields {
     &_field {
       &-input {
-        border-radius: 30px;
+        width: 250px;
+        height: 40px;
         outline: none;
         border: none;
+        border-radius: 20px;
         padding-left: 10px;
+        margin: 10px;
         background: $dark-bg;
+        color: #fff;
+        @extend %mulish14;
+        &:focus,
+        &::placeholder {
+          color: #fff;
+        }
       }
     }
   }
@@ -69,24 +99,41 @@
       border-radius: 30px;
       &-button {
         background: transparent;
+        cursor: pointer;
         outline: none;
         border: none;
+        @extend %mulish16;
+        font-weight: bold;
         color: #fff;
+      }
+    }
+    &_switch {
+      @extend %flexCenter;
+      flex-direction: column;
+      &-title {
+        @extend %mulish14;
+        color: grey;
+      }
+      &-subtitle {
+        cursor: pointer;
+        @extend %mulish14;
       }
     }
   }
   &bottom {
     background: $pink-gradient;
+    padding: 10px 0;
+    min-width: 100%;
     &_circle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @extend %flexCenter;
       margin: 0 auto;
+      margin-top: -30px;
       color: $yamaPink;
       background-color: #fff;
-      border-radius: 45px;
-      width: 50px;
-      height: 50px;
+      border-radius: 60px;
+      width: 45px;
+      height: 45px;
+      font-weight: bold;
     }
     &_servises {
       display: flex;
@@ -94,9 +141,17 @@
       justify-content: space-evenly;
       margin: 0 auto;
       &-item {
+        @extend %flexCenter;
+        cursor: pointer;
         background-color: #fff;
-        border-radius: 45px;
-        padding: 5px 10px;
+        border-radius: 30px;
+        padding: 5px;
+        margin: 5px;
+        width: 30px;
+        height: 30px;
+        color: $yamaPink;
+        @extend %mulish20;
+        font-weight: bold;
       }
     }
   }

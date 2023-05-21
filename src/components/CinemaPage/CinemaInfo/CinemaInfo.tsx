@@ -5,7 +5,7 @@ import synopsisIcon from "../../../data/assets/icons/synopsis.svg";
 import infoIcon from "../../../data/assets/icons/info.svg";
 import staffIcon from "../../../data/assets/icons/staff.svg";
 
-const CinemaInfo: React.FC<any> = ({ releaseDesctiprion, screenshots }) => {
+const CinemaInfo: React.FC<any> = ({ releaseDesctiption, screenshots }) => {
   return (
     <div className="cinemaInfo-container">
       <img className="cinemaInfo-banner" src={informationBanner} alt="" />
@@ -23,7 +23,7 @@ const CinemaInfo: React.FC<any> = ({ releaseDesctiprion, screenshots }) => {
         </div>
         <div className="cinemaInfo-container--center">
           <div className="cinemaInfo-title">Синопсис</div>
-          <div className="cinemaInfo-description">{releaseDesctiprion}</div>
+          <div className="cinemaInfo-description">{releaseDesctiption}</div>
         </div>
         <div className="cinemaInfo-container--right">
           <div className="cinemaInfo-screenshots">

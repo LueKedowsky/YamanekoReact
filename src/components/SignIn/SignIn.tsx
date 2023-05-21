@@ -8,6 +8,10 @@ const SignIn: FC = () => {
   const [isRegister, setIsRegister] = useState(false);
   const regOrLogin = isRegister ? "Регистрация" : "Авторизация";
 
+  const switchClickHandler = () => {
+    setIsRegister(!isRegister);
+  };
+
   return (
     <div className="signIn-container">
       <div className="signIn-container--inner">
@@ -34,15 +38,20 @@ const SignIn: FC = () => {
           <Formik
             initialValues={{ nickName: "", email: "", password: "", repeatPassword: "" }}
             validationSchema={Yup.object({
-              nickName: Yup.string().max(15, "Must be 15 characters or less").required("Required"),
+              nickName: isRegister ? Yup.string().required("Required") : Yup.string(),
               email: Yup.string().email("Invalid email address").required("Required"),
               password: Yup.string().max(20, "Must be 20 characters or less").required("Required"),
-              repeatPassword: Yup.string().max(20, "Must be 20 characters or less").required("Required"),
+              repeatPassword: isRegister
+                ? Yup.string()
+                    .required("Required")
+                    .oneOf([Yup.ref("password")], "Пароли не совпадают")
+                : Yup.string(),
             })}
-            onSubmit={(values, { setSubmitting }) => {
+            onSubmit={(values, { setSubmitting, resetForm }) => {
               setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
+                console.log(JSON.stringify(values, null, 2));
                 setSubmitting(false);
+                resetForm();
               }, 400);
             }}
           >
@@ -51,28 +60,70 @@ const SignIn: FC = () => {
                 <div className="signIn-fields">
                   {isRegister && (
                     <div className="signIn-fields_field">
-                      <input type="text" className="signIn-fields_field-input" placeholder="Имя пользователя" />
+                      <input
+                        type="text"
+                        className="signIn-fields_field-input"
+                        id="nickName"
+                        placeholder="Имя пользователя"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.nickName}
+                      />
+                      {formik.touched.nickName && formik.errors.nickName ? <div className="signIn-formik_error">{formik.errors.nickName}</div> : null}
                     </div>
                   )}
                   <div className="signIn-fields_field">
-                    <input type="email" className="signIn-fields_field-input" placeholder="E-mail" />
+                    <input
+                      type="email"
+                      className="signIn-fields_field-input"
+                      id="email"
+                      placeholder="E-mail"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.email}
+                    />
+                    {formik.touched.email && formik.errors.email ? <div className="signIn-formik_error">{formik.errors.email}</div> : null}
                   </div>
                   <div className="signIn-fields_field">
-                    <input type="password" className="signIn-fields_field-input" placeholder="Пароль" />
+                    <input
+                      type="password"
+                      className="signIn-fields_field-input"
+                      id="password"
+                      placeholder="Пароль"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.password}
+                    />
+                    {formik.touched.password && formik.errors.password ? <div className="signIn-formik_error">{formik.errors.password}</div> : null}
                   </div>
                   {isRegister && (
                     <div className="signIn-fields_field">
-                      <input type="password" className="signIn-fields_field-input" placeholder="Порторите пароль" />
+                      <input
+                        type="password"
+                        className="signIn-fields_field-input"
+                        id="repeatPassword"
+                        placeholder="Повторите пароль"
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        value={formik.values.repeatPassword}
+                      />
+                      {formik.touched.repeatPassword && formik.errors.repeatPassword ? (
+                        <div className="signIn-formik_error">{formik.errors.repeatPassword}</div>
+                      ) : null}
                     </div>
                   )}
                 </div>
                 <div className="signIn-buttons">
                   <div className="signIn-buttons_submit">
-                    <button className="signIn-buttons_submit-button">{regOrLogin}</button>
+                    <button className="signIn-buttons_submit-button" type="submit">
+                      {regOrLogin}
+                    </button>
                   </div>
                   <div className="signIn-buttons_switch">
                     <div className="signIn-buttons_switch-title">{isRegister ? "Уже есть аккаунт?" : "Ещё нет аккаунта?"}</div>
-                    <div className="signIn-buttons_switch-subtitle">{isRegister ? "Авторизоваться" : "Зарегистрироваться"}</div>
+                    <div className="signIn-buttons_switch-subtitle" onClick={switchClickHandler}>
+                      {isRegister ? "Авторизоваться" : "Зарегистрироваться"}
+                    </div>
                   </div>
                 </div>
               </form>

@@ -23,12 +23,8 @@
 
   &-logo {
     @extend %logoStyles;
-    margin-right: 30px;
-
-    display: flex;
-    align-items: center;
-
     @extend %linkClear;
+    margin: 0 30px;
   }
   &-search {
     &__input {

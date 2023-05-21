@@ -5,9 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="header-container">
       <div className="header-container-logo">
-        <Link to="/">
-          <p>YAMANEKO</p>
-        </Link>
+        <Link to="/">YAMANEKO</Link>
       </div>
       <div className="header-container-search">
         <input className="header-container-search__input" type="search" name="" id="" placeholder="Поиск..." />
