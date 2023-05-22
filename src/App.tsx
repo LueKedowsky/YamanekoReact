@@ -11,9 +11,6 @@ import SignIn from "./components/SignIn/SignIn";
 
 function App() {
   const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const titleLinks = releaseData.map((item) => item.titleLink);
-  // console.log(titleLinks);
 
   return (
     <div className="App">

@@ -1,16 +1,16 @@
-import React from "react";
+import { FC, useEffect } from "react";
 import "./CinemaPlayer.scss";
 import { Playerjs } from "./playerjs.js";
 
-const CinemaPlayer: React.FC<any> = (props) => {
+const CinemaPlayer: FC<any> = ({ playerID, toPlayerRef }) => {
   const newplayer = () => {
     const player2 = Playerjs({
-      id: props.propsID,
+      id: playerID,
       file: "http://94.142.139.111/preview.mp4",
       default_quality: "720p",
     });
   };
-  React.useEffect(() => newplayer, []);
+  useEffect(() => newplayer, []);
   return (
     <div className="cinemaPlayer-container">
       <div className="cinemaPlayer-video-archon" ref={toPlayerRef}></div>
@@ -19,7 +19,7 @@ const CinemaPlayer: React.FC<any> = (props) => {
       </div>
       <div className="cinemaPlayer-player-container">
         <div className="cinemaPlayer-player--outer">
-          <div id={props.propsID}></div>
+          <div className="cinemaPlayer-player-video" id={playerID}></div>
         </div>
       </div>
     </div>

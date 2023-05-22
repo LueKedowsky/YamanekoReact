@@ -38,12 +38,12 @@ const SignIn: FC = () => {
           <Formik
             initialValues={{ nickName: "", email: "", password: "", repeatPassword: "" }}
             validationSchema={Yup.object({
-              nickName: isRegister ? Yup.string().required("Required") : Yup.string(),
-              email: Yup.string().email("Invalid email address").required("Required"),
-              password: Yup.string().max(20, "Must be 20 characters or less").required("Required"),
+              nickName: isRegister ? Yup.string().required("Это обязательное поле") : Yup.string(),
+              email: Yup.string().email("Неверный e-mail адрес").required("Это обязательное поле"),
+              password: Yup.string().required("Это обязательное поле"),
               repeatPassword: isRegister
                 ? Yup.string()
-                    .required("Required")
+                    .required("Это обязательное поле")
                     .oneOf([Yup.ref("password")], "Пароли не совпадают")
                 : Yup.string(),
             })}

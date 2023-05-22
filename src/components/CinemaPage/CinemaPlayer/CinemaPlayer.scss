@@ -11,6 +11,7 @@
   }
   &player- {
     &container {
+      position: relative;
       background-image: url("../../../data/assets/icons/player_bg.svg");
       background-position: center center;
       background-repeat: no-repeat;
@@ -19,12 +20,10 @@
       background-color: $yamaPink;
     }
     &-outer {
-      position: relative;
-    }
-    &player {
-      max-width: 1300px;
-      margin: 0px auto;
-      padding: 28px 0px;
+      width: 50%;
+      height: 50%;
+      margin: 0 auto;
+      padding: 20px;
       &::before {
         content: "YAMANEKO";
         position: absolute;
