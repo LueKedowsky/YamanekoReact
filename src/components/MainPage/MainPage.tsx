@@ -1,10 +1,11 @@
+import "./MainPage.scss";
 import LastReleases from "./LastReleases/LastReleases";
 import NewsBlock from "./NewsBlock/NewsBlock";
 
 const MainPage = () => {
   return (
-    <div className="wrapper-container">
-      <main>
+    <div className="mainPage-container">
+      <main className="mainPage-main">
         <LastReleases />
         <NewsBlock />
       </main>

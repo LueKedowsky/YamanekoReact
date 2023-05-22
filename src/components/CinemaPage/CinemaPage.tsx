@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, RefObject, useRef } from "react";
 import CinemaTrailer from "./CinemaTrailer/CinemaTrailer";
 import CinemaPlayer from "./CinemaPlayer/CinemaPlayer";
 import CinemaInfo from "./CinemaInfo/CinemaInfo";

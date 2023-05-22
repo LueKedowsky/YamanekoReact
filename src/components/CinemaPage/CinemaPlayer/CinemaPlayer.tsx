@@ -13,7 +13,7 @@ const CinemaPlayer: React.FC<any> = (props) => {
   React.useEffect(() => newplayer, []);
   return (
     <div className="cinemaPlayer-container">
-      <div className="cinemaPlayer-video-archon" id="video-archon"></div>
+      <div className="cinemaPlayer-video-archon" ref={toPlayerRef}></div>
       <div className="cinemaPlayer-devider">
         <div className="cinemaPlayer-devider--inner"></div>
       </div>

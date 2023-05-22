@@ -7,6 +7,7 @@ import Page404 from "./components/Page404/Page404";
 import data from "./data/tempData/data.json";
 import { SingleReleaseDataType } from "./Types/dataTypes";
 import CinemaPage from "./components/CinemaPage/CinemaPage";
+import SignIn from "./components/SignIn/SignIn";
 
 function App() {
   const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
@@ -20,9 +21,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/releases" element={<ReleasesPage />} />
-        {/* <Route path=":titleLinks" element={<CinemaPage props={releaseData} />} /> */}
+        <Route path="/sign-in" element={<SignIn />} />
         {releaseData.map(
-          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, roles, releaseDesctiprion }) => (
+          ({ id, titleLink, releasePoster, releaseTrailer, releaseTitleRu, releaseTitleOrig, releaseGenresList, screenshots, roles, releaseDesctiption }) => (
             <Route
               key={id}
               path={titleLink}
@@ -37,7 +38,7 @@ function App() {
                   releaseGenresList={releaseGenresList}
                   screenshots={screenshots}
                   roles={roles}
-                  releaseDesctiprion={releaseDesctiprion}
+                  releaseDesctiption={releaseDesctiption}
                 />
               }
             />

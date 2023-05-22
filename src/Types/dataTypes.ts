@@ -8,7 +8,7 @@ export type SingleReleaseDataType = {
   releaseGenresList: string[],
   screenshots: string[],
   roles: RolesType[],
-  releaseDesctiprion: string
+  releaseDesctiption: string
 }
 
 export type RolesType = {

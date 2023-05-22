@@ -23,12 +23,8 @@
 
   &-logo {
     @extend %logoStyles;
-    margin-right: 30px;
-
-    display: flex;
-    align-items: center;
-
     @extend %linkClear;
+    margin: 0 30px;
   }
   &-search {
     &__input {
@@ -67,7 +63,7 @@
     padding: 5px 20px;
     margin-right: 30px;
 
-    background: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
+    background: $pink-gradient;
     border-radius: 13px;
   }
   @extend %linkClear;

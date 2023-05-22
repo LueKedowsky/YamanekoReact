@@ -1,0 +1,23 @@
+@import "../../../data/assets/scssData/scssVars.scss";
+
+.lastReleases- {
+  &container {
+    background-image: url("../../../data/assets/icons/release_bg.png");
+    &--inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+  }
+  &title {
+    @extend %oswald36;
+    color: white;
+    margin-left: 74px;
+    margin-bottom: 30px;
+  }
+  &releases {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}

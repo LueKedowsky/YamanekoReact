@@ -1,0 +1,32 @@
+@import "../../../data/assets/scssData/scssVars.scss";
+
+.newsBlock- {
+  &container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  &news {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .first-news {
+      width: 600px;
+      height: 400px;
+    }
+    .second-news {
+      width: 340px;
+      height: 190px;
+      &:nth-child(1) {
+        margin-bottom: 20px;
+      }
+    }
+    .third-news {
+      width: 300px;
+      height: 400px;
+    }
+    &_item {
+      background-color: $light-bg;
+    }
+  }
+}

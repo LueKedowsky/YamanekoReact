@@ -9,7 +9,7 @@ const SingleRelease: React.FC<SingleReleaseDataType> = ({
   releaseTitleRu,
   releaseTitleOrig,
   releaseGenresList,
-  releaseDesctiprion,
+  releaseDesctiption,
 }) => {
   // реализовать поиск по жанрам при клике на конкретный жанр в тэгах под названием
   return (
@@ -33,7 +33,7 @@ const SingleRelease: React.FC<SingleReleaseDataType> = ({
             </p>
           ))}
         </div>
-        <div className="single-release-description">{releaseDesctiprion}</div>
+        <div className="single-release-description">{releaseDesctiption}</div>
       </div>
     </div>
   );
