@@ -21,7 +21,7 @@ const CinemaPage: FC<any> = ({
 
   return (
     <div>
-      <CinemaTrailer releaseTrailer={releaseTrailer} releaseTitleRu={releaseTitleRu} />
+      <CinemaTrailer releaseTrailer={releaseTrailer} releaseTitleRu={releaseTitleRu} toPlayerRef={toPlayerRef} />
       <CinemaPlayer playerID="player1" toPlayerRef={toPlayerRef} />
       <CinemaInfo releaseDesctiption={releaseDesctiption} screenshots={screenshots} />
       <CinemaRoles roles={roles} />

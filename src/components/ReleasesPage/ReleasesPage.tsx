@@ -1,7 +1,7 @@
 import SingleRelease from "./SingleRelease/SingleRelease";
 import "./ReleasesPage.scss";
-import data from "../../data/tempData/data.json";
-import { SingleReleaseDataType } from "../../Types/dataTypes";
+import data from "@/data/tempData/data.json";
+import { SingleReleaseDataType } from "@/Types/dataTypes";
 
 const ReleasesPage: React.FC = () => {
   const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));

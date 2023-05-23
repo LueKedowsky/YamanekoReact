@@ -1,5 +1,5 @@
 import "./SingleRelease.scss";
-import { SingleReleaseDataType } from "../../../Types/dataTypes";
+import { SingleReleaseDataType } from "@/Types/dataTypes";
 import { Link } from "react-router-dom";
 
 const SingleRelease: React.FC<SingleReleaseDataType> = ({

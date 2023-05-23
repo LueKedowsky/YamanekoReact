@@ -1,8 +1,8 @@
 import "./Footer.scss";
-import instagramIcon from "../../data/assets/icons/Instagram.svg";
-import discordIcon from "../../data/assets/icons/Discord.svg";
-import telegramIcon from "../../data/assets/icons/Telegram.svg";
-import youtubeIcon from "../../data/assets/icons/YouTube.svg";
+import instagramIcon from "@data/assets/icons/Instagram.svg";
+import discordIcon from "@data/assets/icons/Discord.svg";
+import telegramIcon from "@data/assets/icons/Telegram.svg";
+import youtubeIcon from "@data/assets/icons/YouTube.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           "YAMANEKO" — команда, занимающаяся переводом и озвучиванием зарубежной киноиндустрии на русский язык.
         </p>
         <p className="footer-container-copyright__text">В случае нарушения авторских прав - обращайтесь на почту: yamaneko.response@gmail.com</p>
-        <p className="footer-container-copyright__text">&#169; 2020 - 2022 «YAMANEKO» Разработано Monashka & Dragomore & LueKedowsky</p>
+        <p className="footer-container-copyright__text">&#169; 2020 - 2023 «YAMANEKO» (WIP) Разработано Monashka & Dragomore & LueKedowsky</p>
       </div>
     </footer>
   );

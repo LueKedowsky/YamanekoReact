@@ -1,5 +1,5 @@
 import "./Page404.scss";
-import cat404 from "../../data/assets/icons/404.svg";
+import cat404 from "@data/assets/icons/404.svg";
 
 const Page404 = () => {
   return (

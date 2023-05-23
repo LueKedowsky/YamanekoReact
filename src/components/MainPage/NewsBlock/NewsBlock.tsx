@@ -1,5 +1,5 @@
 import "./NewsBlock.scss";
-import newsBanner from "../../../data/assets/icons/news.png";
+import newsBanner from "@data/assets/icons/news.png";
 
 const NewsBlock: React.FC = () => {
   return (

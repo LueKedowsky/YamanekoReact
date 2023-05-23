@@ -1,7 +1,7 @@
 import React from "react";
 import "./LastReleases.scss";
-import data from "../../../data/tempData/data.json";
-import { SingleReleaseDataType } from "../../../Types/dataTypes";
+import data from "@/data/tempData/data.json";
+import { SingleReleaseDataType } from "@/Types/dataTypes";
 import LastReleasesBanner from "./LastReleasesBanner/LastReleasesBanner";
 import LastReleasesRelease from "./LastReleasesRelease/LastReleasesRelease";
 

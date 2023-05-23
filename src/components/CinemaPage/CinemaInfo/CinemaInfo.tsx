@@ -1,9 +1,9 @@
 import React from "react";
 import "./CinemaInfo.scss";
-import informationBanner from "../../../data/assets/icons/information.svg";
-import synopsisIcon from "../../../data/assets/icons/synopsis.svg";
-import infoIcon from "../../../data/assets/icons/info.svg";
-import staffIcon from "../../../data/assets/icons/staff.svg";
+import informationBanner from "@data/assets/icons/information.svg";
+import synopsisIcon from "@data/assets/icons/synopsis.svg";
+import infoIcon from "@data/assets/icons/info.svg";
+import staffIcon from "@data/assets/icons/staff.svg";
 
 const CinemaInfo: React.FC<any> = ({ releaseDesctiption, screenshots }) => {
   return (
