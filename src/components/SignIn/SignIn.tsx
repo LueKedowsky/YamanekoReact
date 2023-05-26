@@ -1,12 +1,12 @@
-import { FC, useState } from "react";
-import "./SignIn.scss";
-import ReactPlayer from "react-player";
-import { Formik } from "formik";
-import * as Yup from "yup";
+import { FC, useState } from 'react';
+import './SignIn.scss';
+import ReactPlayer from 'react-player';
+import { Formik } from 'formik';
+import * as Yup from 'yup';
 
 const SignIn: FC = () => {
   const [isRegister, setIsRegister] = useState(false);
-  const regOrLogin = isRegister ? "Регистрация" : "Авторизация";
+  const regOrLogin = isRegister ? 'Регистрация' : 'Авторизация';
 
   const switchClickHandler = () => {
     setIsRegister(!isRegister);
@@ -17,12 +17,16 @@ const SignIn: FC = () => {
       <div className="signIn-container--inner">
         <div className="signIn-container--left">
           <div className="signIn-overlay">
-            <div className="signIn-overlay_title">{isRegister ? "Добро Пожаловать!" : "С Возвращением!"}</div>
-            <div className="signIn-overlay_subtitle">тут нужно придумать классную надпись, чтобы было вкусно!</div>
+            <div className="signIn-overlay_title">
+              {isRegister ? 'Добро Пожаловать!' : 'С Возвращением!'}
+            </div>
+            <div className="signIn-overlay_subtitle">
+              тут нужно придумать классную надпись, чтобы было вкусно!
+            </div>
           </div>
           <ReactPlayer
             className="signIn-video"
-            url="http://94.142.139.111/preview.mp4"
+            url="http://yamaneko.fun/files/preview.mp4"
             playing
             loop
             volume={0}
@@ -31,20 +35,29 @@ const SignIn: FC = () => {
             width="890px"
             height="501px"
           />
-          <div className="signIn-video"></div>
+          <div className="signIn-video" />
         </div>
         <div className="signIn-container--right">
           <div className="signIn-form-title">{regOrLogin} пользователя</div>
           <Formik
-            initialValues={{ nickName: "", email: "", password: "", repeatPassword: "" }}
+            initialValues={{
+              nickName: '',
+              email: '',
+              password: '',
+              repeatPassword: '',
+            }}
             validationSchema={Yup.object({
-              nickName: isRegister ? Yup.string().required("Это обязательное поле") : Yup.string(),
-              email: Yup.string().email("Неверный e-mail адрес").required("Это обязательное поле"),
-              password: Yup.string().required("Это обязательное поле"),
+              nickName: isRegister
+                ? Yup.string().required('Это обязательное поле')
+                : Yup.string(),
+              email: Yup.string()
+                .email('Неверный e-mail адрес')
+                .required('Это обязательное поле'),
+              password: Yup.string().required('Это обязательное поле'),
               repeatPassword: isRegister
                 ? Yup.string()
-                    .required("Это обязательное поле")
-                    .oneOf([Yup.ref("password")], "Пароли не совпадают")
+                    .required('Это обязательное поле')
+                    .oneOf([Yup.ref('password')], 'Пароли не совпадают')
                 : Yup.string(),
             })}
             onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -69,7 +82,11 @@ const SignIn: FC = () => {
                         onBlur={formik.handleBlur}
                         value={formik.values.nickName}
                       />
-                      {formik.touched.nickName && formik.errors.nickName ? <div className="signIn-formik_error">{formik.errors.nickName}</div> : null}
+                      {formik.touched.nickName && formik.errors.nickName ? (
+                        <div className="signIn-formik_error">
+                          {formik.errors.nickName}
+                        </div>
+                      ) : null}
                     </div>
                   )}
                   <div className="signIn-fields_field">
@@ -82,7 +99,11 @@ const SignIn: FC = () => {
                       onBlur={formik.handleBlur}
                       value={formik.values.email}
                     />
-                    {formik.touched.email && formik.errors.email ? <div className="signIn-formik_error">{formik.errors.email}</div> : null}
+                    {formik.touched.email && formik.errors.email ? (
+                      <div className="signIn-formik_error">
+                        {formik.errors.email}
+                      </div>
+                    ) : null}
                   </div>
                   <div className="signIn-fields_field">
                     <input
@@ -94,7 +115,11 @@ const SignIn: FC = () => {
                       onBlur={formik.handleBlur}
                       value={formik.values.password}
                     />
-                    {formik.touched.password && formik.errors.password ? <div className="signIn-formik_error">{formik.errors.password}</div> : null}
+                    {formik.touched.password && formik.errors.password ? (
+                      <div className="signIn-formik_error">
+                        {formik.errors.password}
+                      </div>
+                    ) : null}
                   </div>
                   {isRegister && (
                     <div className="signIn-fields_field">
@@ -107,22 +132,35 @@ const SignIn: FC = () => {
                         onBlur={formik.handleBlur}
                         value={formik.values.repeatPassword}
                       />
-                      {formik.touched.repeatPassword && formik.errors.repeatPassword ? (
-                        <div className="signIn-formik_error">{formik.errors.repeatPassword}</div>
+                      {formik.touched.repeatPassword &&
+                      formik.errors.repeatPassword ? (
+                        <div className="signIn-formik_error">
+                          {formik.errors.repeatPassword}
+                        </div>
                       ) : null}
                     </div>
                   )}
                 </div>
                 <div className="signIn-buttons">
                   <div className="signIn-buttons_submit">
-                    <button className="signIn-buttons_submit-button" type="submit">
+                    <button
+                      className="signIn-buttons_submit-button"
+                      type="submit"
+                    >
                       {regOrLogin}
                     </button>
                   </div>
                   <div className="signIn-buttons_switch">
-                    <div className="signIn-buttons_switch-title">{isRegister ? "Уже есть аккаунт?" : "Ещё нет аккаунта?"}</div>
-                    <div className="signIn-buttons_switch-subtitle" onClick={switchClickHandler}>
-                      {isRegister ? "Авторизоваться" : "Зарегистрироваться"}
+                    <div className="signIn-buttons_switch-title">
+                      {isRegister ? 'Уже есть аккаунт?' : 'Ещё нет аккаунта?'}
+                    </div>
+                    <div
+                      className="signIn-buttons_switch-subtitle"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={switchClickHandler}
+                    >
+                      {isRegister ? 'Авторизоваться' : 'Зарегистрироваться'}
                     </div>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
-import "./Page404.scss";
-import cat404 from "@data/assets/icons/404.svg";
+import './Page404.scss';
+import cat404 from 'src/assets/icons/404.svg';
 
-const Page404 = () => {
+function Page404() {
   return (
     <div className="page404-container">
       <h1 className="page404-header1">404</h1>
@@ -9,6 +9,6 @@ const Page404 = () => {
       <img className="page404-img" src={cat404} alt="" />
     </div>
   );
-};
+}
 
 export default Page404;

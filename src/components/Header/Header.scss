@@ -1,4 +1,4 @@
-@import "../../data/assets/scssData/scssVars.scss";
+@import 'src/assets/scssData/scssVars.scss';
 
 .header-container {
   position: sticky;
@@ -28,7 +28,7 @@
   }
   &-search {
     &__input {
-      background-image: url("../../data/assets/icons/lupa.svg");
+      background-image: url('src/assets/icons/lupa.svg');
       background-repeat: no-repeat;
       background-position-x: 10px;
       background-position-y: center;

@@ -1,23 +1,26 @@
-import "./SingleRelease.scss";
-import { SingleReleaseDataType } from "@/Types/dataTypes";
-import { Link } from "react-router-dom";
+import './SingleRelease.scss';
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
+import { SingleReleaseDataType } from 'src/Types/dataTypes';
 
-const SingleRelease: React.FC<SingleReleaseDataType> = ({
-  id: itemId,
+const SingleRelease: FC<SingleReleaseDataType> = ({
   titleLink,
   releasePoster,
   releaseTitleRu,
   releaseTitleOrig,
   releaseGenresList,
   releaseDesctiption,
-}) => {
-  // реализовать поиск по жанрам при клике на конкретный жанр в тэгах под названием
+}: SingleReleaseDataType) => {
   return (
     <div className="single-release-container">
       <div className="single-release-container--left">
         <div className="single-release-poster">
           <Link to={titleLink}>
-            <img className="single-release-poster--img" src={releasePoster} alt="" />
+            <img
+              className="single-release-poster--img"
+              src={releasePoster}
+              alt=""
+            />
           </Link>
         </div>
       </div>
@@ -27,7 +30,7 @@ const SingleRelease: React.FC<SingleReleaseDataType> = ({
         </div>
         <div className="single-release-title--orig">{releaseTitleOrig}</div>
         <div className="single-release-genre-list">
-          {releaseGenresList.map((item: any, index) => (
+          {releaseGenresList.map((item: string, index: number) => (
             <p className="single-release-genre-list--item" key={item + index}>
               {item}
             </p>

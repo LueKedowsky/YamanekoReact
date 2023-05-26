@@ -1,9 +1,9 @@
-import React from "react";
-import "./CinemaInfo.scss";
-import informationBanner from "@data/assets/icons/information.svg";
-import synopsisIcon from "@data/assets/icons/synopsis.svg";
-import infoIcon from "@data/assets/icons/info.svg";
-import staffIcon from "@data/assets/icons/staff.svg";
+import React from 'react';
+import './CinemaInfo.scss';
+import informationBanner from 'src/assets/icons/information.svg';
+import synopsisIcon from 'src/assets/icons/synopsis.svg';
+import infoIcon from 'src/assets/icons/info.svg';
+import staffIcon from 'src/assets/icons/staff.svg';
 
 const CinemaInfo: React.FC<any> = ({ releaseDesctiption, screenshots }) => {
   return (
@@ -12,7 +12,11 @@ const CinemaInfo: React.FC<any> = ({ releaseDesctiption, screenshots }) => {
       <div className="cinemaInfo-flexcontainer">
         <div className="cinemaInfo-container--left">
           <div className="cinemaInfo-switchers active">
-            <img className="cinemaInfo-switchers_img" src={synopsisIcon} alt="" />
+            <img
+              className="cinemaInfo-switchers_img"
+              src={synopsisIcon}
+              alt=""
+            />
           </div>
           <div className="cinemaInfo-switchers">
             <img className="cinemaInfo-switchers_img" src={infoIcon} alt="" />
@@ -27,7 +31,11 @@ const CinemaInfo: React.FC<any> = ({ releaseDesctiption, screenshots }) => {
         </div>
         <div className="cinemaInfo-container--right">
           <div className="cinemaInfo-screenshots">
-            <img className="cinemaInfo-screenshots_screenshot" src={screenshots[0]} alt="" />
+            <img
+              className="cinemaInfo-screenshots_screenshot"
+              src={screenshots[0]}
+              alt=""
+            />
           </div>
         </div>
       </div>

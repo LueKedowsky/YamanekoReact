@@ -1,4 +1,4 @@
-@import "../../../data/assets/scssData/scssVars.scss";
+@import 'src/assets/scssData/scssVars.scss';
 
 .cinemaTrailer- {
   &trailer {
@@ -26,7 +26,7 @@
       &-title {
         color: white;
         text-shadow: 3px 3px 5px black;
-        font-family: "Oswald";
+        font-family: 'Oswald';
         font-style: normal;
         font-weight: 600;
         font-size: 72px;
@@ -53,7 +53,11 @@
           -moz-box-shadow: 5px 5px 0px 0px black;
           box-shadow: 5px 5px 0px 0px black;
           background-position: 100%;
-          background-image: -webkit-linear-gradient(45deg, #000 50%, transparent 50%);
+          background-image: -webkit-linear-gradient(
+            45deg,
+            #000 50%,
+            transparent 50%
+          );
           background-image: linear-gradient(45deg, #000 50%, transparent 50%);
           background-size: 400%;
           -webkit-transition: background 300ms ease-in-out;
@@ -62,7 +66,7 @@
             background-position: 0;
           }
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             border-left: 1px solid #fff;
             border-top: 1px solid #fff;
@@ -72,7 +76,7 @@
             top: -5px;
           }
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             border-right: 2px solid #fff;
             border-bottom: 2px solid #fff;

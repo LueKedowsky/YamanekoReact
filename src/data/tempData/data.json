@@ -3,7 +3,7 @@
     "id": 1,
     "titleLink": "/bungouStrayDogsMovie1",
     "releasePoster": "https://dere.shikimori.me/uploads/poster/animes/34944/c8dbe1a2373441745a34709035780000.jpeg",
-    "releaseTrailer": "http://yamaneko.fun/files/preview.mp4",
+    "releaseTrailer": "https://yamaneko.fun/files/preview.mp4",
     "releaseTitleRu": "Великий из бродячих псов: Сгнившее яблоко",
     "releaseTitleOrig": "Bungou Stray Dogs: Dead Apple",
     "releaseGenresList": ["Детектив", "Сверхъестественное", "Экшен"],
@@ -34,11 +34,13 @@
     "id": 2,
     "titleLink": "/shingekiNoKyojinSeason1",
     "releasePoster": "https://desu.shikimori.me/uploads/poster/animes/16498/7a452aa20f27318bd8d87e3d70c2ccca.jpeg",
-    "releaseTrailer": "http://yamaneko.fun/files/preview.mp4",
+    "releaseTrailer": "https://yamaneko.fun/files/preview.mp4",
     "releaseTitleRu": "Атака титанов",
     "releaseTitleOrig": "Shingeki no Kyojin",
     "releaseGenresList": ["Сёнен", "Драма", "Экшен", "Военное"],
-    "screenshots": ["https://desu.shikimori.me/system/screenshots/original/5615490babe411b038ae066b70bba0f563da464a.jpg?1521661427"],
+    "screenshots": [
+      "https://desu.shikimori.me/system/screenshots/original/5615490babe411b038ae066b70bba0f563da464a.jpg?1521661427"
+    ],
     "roles": [
       {
         "name": "Накаджима Ацуши",
@@ -62,11 +64,13 @@
     "id": 3,
     "titleLink": "/eightySixSeason1",
     "releasePoster": "https://moe.shikimori.me/uploads/poster/animes/41457/43c6af05116f540b796c7fb68a3f7058.jpeg",
-    "releaseTrailer": "http://yamaneko.fun/files/preview.mp4",
+    "releaseTrailer": "https://yamaneko.fun/files/preview.mp4",
     "releaseTitleRu": "Восемьдесят шесть",
     "releaseTitleOrig": "86",
     "releaseGenresList": ["Меха", "Драма", "Экшен", "Военное"],
-    "screenshots": ["https://desu.shikimori.me/system/screenshots/original/5615490babe411b038ae066b70bba0f563da464a.jpg?1521661427"],
+    "screenshots": [
+      "https://desu.shikimori.me/system/screenshots/original/5615490babe411b038ae066b70bba0f563da464a.jpg?1521661427"
+    ],
     "roles": [
       {
         "name": "Накаджима Ацуши",
@@ -90,11 +94,13 @@
     "id": 4,
     "titleLink": "/eminenseInShadowSeason1",
     "releasePoster": "https://kawai.shikimori.me/uploads/poster/animes/48316/fbbdbfcf62e346fd61c67653c7089652.png",
-    "releaseTrailer": "http://yamaneko.fun/files/preview.mp4",
+    "releaseTrailer": "https://yamaneko.fun/files/preview.mp4",
     "releaseTitleRu": "Восхождение в тени!",
     "releaseTitleOrig": "Kage no Jitsuryokusha ni Naritakute!",
     "releaseGenresList": ["Фэнтези", "Комедия", "Экшен"],
-    "screenshots": ["https://desu.shikimori.me/system/screenshots/original/3660f8aae35d8415c87cbddc8f5eb7c22e1e5eb6.jpg?1664989985"],
+    "screenshots": [
+      "https://desu.shikimori.me/system/screenshots/original/3660f8aae35d8415c87cbddc8f5eb7c22e1e5eb6.jpg?1664989985"
+    ],
     "roles": [
       {
         "name": "Накаджима Ацуши",

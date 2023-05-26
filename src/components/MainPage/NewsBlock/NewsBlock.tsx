@@ -1,7 +1,8 @@
-import "./NewsBlock.scss";
-import newsBanner from "@data/assets/icons/news.png";
+import './NewsBlock.scss';
+import { FC } from 'react';
+import newsBanner from 'src/assets/icons/news.png';
 
-const NewsBlock: React.FC = () => {
+const NewsBlock: FC = () => {
   return (
     <div className="newsBlock-container">
       <img src={newsBanner} alt="" className="news-banner" />
