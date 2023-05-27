@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
+import ScrollToTop from 'utils/ScrollToTop';
 import App from './App';
 
 const root = ReactDOM.createRoot(
@@ -9,6 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
+    <ScrollToTop />
     <React.StrictMode>
       <App />
     </React.StrictMode>

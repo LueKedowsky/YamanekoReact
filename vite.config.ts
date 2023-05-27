@@ -14,6 +14,7 @@ export default defineConfig({
       components: '/src/components',
       data: '/src/data',
       types: '/src/types',
+      utils: '/src/utils',
     },
   },
   test: {
