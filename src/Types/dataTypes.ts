@@ -8,7 +8,7 @@ export type SingleReleaseDataType = {
   releaseGenresList: string[];
   screenshots: string[];
   roles: RolesType[];
-  releaseDesctiption: string;
+  releaseDescription: string;
 };
 
 export type RolesType = {

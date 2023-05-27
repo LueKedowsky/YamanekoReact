@@ -14,7 +14,7 @@ const CinemaPage: FC<any> = ({
   releaseGenresList,
   screenshots,
   roles,
-  releaseDesctiption,
+  releaseDescription,
 }) => {
   console.log(
     itemId,
@@ -25,7 +25,7 @@ const CinemaPage: FC<any> = ({
     releaseTitleOrig,
     releaseGenresList,
     roles,
-    releaseDesctiption
+    releaseDescription
   );
   const toPlayerRef: RefObject<null> = useRef(null);
 
@@ -38,7 +38,7 @@ const CinemaPage: FC<any> = ({
       />
       <CinemaPlayer playerID="player1" toPlayerRef={toPlayerRef} />
       <CinemaInfo
-        releaseDesctiption={releaseDesctiption}
+        releaseDescription={releaseDescription}
         screenshots={screenshots}
       />
       <CinemaRoles roles={roles} />

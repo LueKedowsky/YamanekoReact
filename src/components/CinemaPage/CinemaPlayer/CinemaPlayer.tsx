@@ -17,8 +17,8 @@ const CinemaPlayer: FC<any> = ({ playerID, toPlayerRef }) => {
   return (
     <div className="cinemaPlayer-container">
       <div className="cinemaPlayer-video-archon" ref={toPlayerRef} />
-      <div className="cinemaPlayer-devider">
-        <div className="cinemaPlayer-devider--inner" />
+      <div className="cinemaPlayer-divider">
+        <div className="cinemaPlayer-divider--inner" />
       </div>
       <div className="cinemaPlayer-player-container">
         <div className="cinemaPlayer-player--outer">

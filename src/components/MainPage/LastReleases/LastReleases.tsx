@@ -1,16 +1,29 @@
-import React from 'react';
-import './LastReleases.scss';
-import data from 'data/tempData/data.json';
+import { FC, useState, useEffect } from 'react';
 import { SingleReleaseDataType } from 'types/dataTypes';
+import axios from 'axios';
+import './LastReleases.scss';
+// import data from 'data/tempData/data.json';
 import LastReleasesBanner from './LastReleasesBanner/LastReleasesBanner';
 import LastReleasesRelease from './LastReleasesRelease/LastReleasesRelease';
 
-const LastReleases: React.FC = () => {
-  const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
-  const fourElementsOfReleaseData: SingleReleaseDataType[] = releaseData.slice(
-    0,
-    4
-  );
+const LastReleases: FC = () => {
+  const [data, setData] = useState<SingleReleaseDataType[]>([]);
+  const getData = async (link: string) => {
+    await axios
+      .get(link)
+      .then((response) => {
+        console.log(response.data);
+        setData(response.data);
+        console.log(data[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  useEffect(() => {
+    getData('https://yamaneko.fun/api/get_releases');
+  }, []);
+  const fourElementsOfReleaseData: SingleReleaseDataType[] = data.slice(0, 4);
   return (
     <div className="lastReleases-container">
       <div className="lastReleases-container--inner">

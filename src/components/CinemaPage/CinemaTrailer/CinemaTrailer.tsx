@@ -17,7 +17,7 @@ const CinemaTrailer: FC<any> = ({
           <div className="cinemaTrailer-trailer_overlay-watchButton">
             <button
               className="cinemaTrailer-trailer_overlay-watchButton_button"
-              onKeyDown={() =>
+              onClick={() =>
                 toPlayerRef.current.scrollIntoView({ behavior: 'smooth' })
               }
               type="button"

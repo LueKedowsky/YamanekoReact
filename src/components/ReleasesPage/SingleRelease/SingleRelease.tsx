@@ -9,7 +9,7 @@ const SingleRelease: FC<SingleReleaseDataType> = ({
   releaseTitleRu,
   releaseTitleOrig,
   releaseGenresList,
-  releaseDesctiption,
+  releaseDescription,
 }: SingleReleaseDataType) => {
   return (
     <div className="single-release-container">
@@ -36,7 +36,7 @@ const SingleRelease: FC<SingleReleaseDataType> = ({
             </p>
           ))}
         </div>
-        <div className="single-release-description">{releaseDesctiption}</div>
+        <div className="single-release-description">{releaseDescription}</div>
       </div>
     </div>
   );
