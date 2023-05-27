@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import './Footer.scss';
-import instagramIcon from 'src/assets/icons/Instagram.svg';
-import discordIcon from 'src/assets/icons/Discord.svg';
-import telegramIcon from 'src/assets/icons/Telegram.svg';
-import youtubeIcon from 'src/assets/icons/YouTube.svg';
+import instagramIcon from 'assets/icons/Instagram.svg';
+import discordIcon from 'assets/icons/Discord.svg';
+import telegramIcon from 'assets/icons/Telegram.svg';
+import youtubeIcon from 'assets/icons/YouTube.svg';
 
 const Footer: FC = () => {
   return (

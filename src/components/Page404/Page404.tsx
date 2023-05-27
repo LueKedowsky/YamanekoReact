@@ -1,5 +1,5 @@
 import './Page404.scss';
-import cat404 from 'src/assets/icons/404.svg';
+import cat404 from 'assets/icons/404.svg';
 
 function Page404() {
   return (

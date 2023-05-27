@@ -1,8 +1,8 @@
-@import 'src/assets/scssData/scssVars.scss';
+@import 'assets/scssData/scssVars.scss';
 
 .lastReleases- {
   &container {
-    background-image: url('../../../data/assets/icons/release_bg.png');
+    background-image: url('assets/icons/release_bg.png');
     &--inner {
       max-width: 1300px;
       margin: 0 auto;

@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import Footer from 'src/components/Footer/Footer';
-import Header from 'src/components/Header/Header';
-import MainPage from 'src/components/MainPage/MainPage';
-import ReleasesPage from 'src/components/ReleasesPage/ReleasesPage';
-import data from 'src/data/tempData/data.json';
-import { SingleReleaseDataType } from 'src/Types/dataTypes';
-import CinemaPage from 'src/components/CinemaPage/CinemaPage';
-import SignIn from 'src/components/SignIn/SignIn';
+import Footer from 'components/Footer/Footer';
+import Header from 'components/Header/Header';
+import MainPage from 'components/MainPage/MainPage';
+import ReleasesPage from 'components/ReleasesPage/ReleasesPage';
+import data from 'data/tempData/data.json';
+import { SingleReleaseDataType } from 'types/dataTypes';
+import CinemaPage from 'components/CinemaPage/CinemaPage';
+import SignIn from 'components/SignIn/SignIn';
 import Page404 from './components/Page404/Page404';
 
 function App() {

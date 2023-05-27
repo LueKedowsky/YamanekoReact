@@ -1,6 +1,6 @@
 import React from 'react';
 import './LastReleasesBanner.scss';
-import banner from 'src/assets/icons/banner.svg';
+import banner from 'assets/icons/banner.svg';
 
 const LastReleasesBanner: React.FC = () => {
   return (

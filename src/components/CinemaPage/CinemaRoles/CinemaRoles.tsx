@@ -1,7 +1,7 @@
 import React from 'react';
 import './CinemaRoles.scss';
-import rolesBanner from 'src/assets/icons/roles.svg';
-import { RolesType } from 'src/Types/dataTypes';
+import rolesBanner from 'assets/icons/roles.svg';
+import { RolesType } from 'types/dataTypes';
 
 const CinemaRoles: React.FC<any> = ({ roles }) => {
   return (

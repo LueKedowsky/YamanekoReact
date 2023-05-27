@@ -1,10 +1,11 @@
-import { SingleReleaseDataType } from 'src/Types/dataTypes';
-import releasesBanner from 'src/assets/icons/releases.png';
+import { FC } from 'react';
+import { SingleReleaseDataType } from 'types/dataTypes';
+import releasesBanner from 'assets/icons/releases.png';
 import './ReleasesPage.scss';
-import data from 'src/data/tempData/data.json';
+import data from 'data/tempData/data.json';
 import SingleRelease from './SingleRelease/SingleRelease';
 
-const ReleasesPage: React.FC = () => {
+const ReleasesPage: FC = () => {
   const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
   return (
     <div className="releases-container">

@@ -1,7 +1,7 @@
 import './SingleRelease.scss';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import { SingleReleaseDataType } from 'src/Types/dataTypes';
+import { SingleReleaseDataType } from 'types/dataTypes';
 
 const SingleRelease: FC<SingleReleaseDataType> = ({
   titleLink,
