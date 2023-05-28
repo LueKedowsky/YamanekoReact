@@ -2,7 +2,6 @@ import { FC, useState, useEffect } from 'react';
 import { SingleReleaseDataType } from 'types/dataTypes';
 import axios from 'axios';
 import './LastReleases.scss';
-// import data from 'data/tempData/data.json';
 import LastReleasesBanner from './LastReleasesBanner/LastReleasesBanner';
 import LastReleasesRelease from './LastReleasesRelease/LastReleasesRelease';
 
@@ -20,10 +19,13 @@ const LastReleases: FC = () => {
         console.log(error);
       });
   };
+
   useEffect(() => {
     getData('https://yamaneko.fun/api/get_releases');
   }, []);
+
   const fourElementsOfReleaseData: SingleReleaseDataType[] = data.slice(0, 4);
+
   return (
     <div className="lastReleases-container">
       <div className="lastReleases-container--inner">

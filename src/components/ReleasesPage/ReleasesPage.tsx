@@ -2,13 +2,10 @@ import { FC, useEffect, useState } from 'react';
 import { SingleReleaseDataType } from 'types/dataTypes';
 import releasesBanner from 'assets/icons/releases.png';
 import './ReleasesPage.scss';
-// import data from 'data/tempData/data.json';
 import axios from 'axios';
 import SingleRelease from './SingleRelease/SingleRelease';
 
 const ReleasesPage: FC = () => {
-  // const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
-
   const [data, setData] = useState<SingleReleaseDataType[]>([]);
   const getData = async (link: string) => {
     await axios

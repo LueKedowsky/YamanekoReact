@@ -6,7 +6,6 @@ import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import MainPage from 'components/MainPage/MainPage';
 import ReleasesPage from 'components/ReleasesPage/ReleasesPage';
-// import data from 'data/tempData/data.json';
 import CinemaPage from 'components/CinemaPage/CinemaPage';
 import SignIn from 'components/SignIn/SignIn';
 import Page404 from './components/Page404/Page404';
