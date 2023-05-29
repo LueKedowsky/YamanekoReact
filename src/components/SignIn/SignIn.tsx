@@ -26,7 +26,7 @@ const SignIn: FC = () => {
           </div>
           <ReactPlayer
             className="signIn-video"
-            url="http://yamaneko.fun/files/preview.mp4"
+            url="https://yamaneko.fun/files/preview.mp4"
             playing
             loop
             volume={0}
@@ -158,7 +158,7 @@ const SignIn: FC = () => {
                       className="signIn-buttons_switch-subtitle"
                       role="button"
                       tabIndex={0}
-                      onKeyDown={switchClickHandler}
+                      onClick={switchClickHandler}
                     >
                       {isRegister ? 'Авторизоваться' : 'Зарегистрироваться'}
                     </div>
