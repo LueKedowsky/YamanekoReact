@@ -9,9 +9,7 @@ const ReleasesDataContextProvider: FC<any> = ({ children }) => {
     await axios
       .get(link)
       .then((response) => {
-        console.log(response.data);
         setData(response.data);
-        console.log(data[0]);
       })
       .catch((error) => {
         console.log(error);
