@@ -1,34 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { SingleReleaseDataType } from 'types/dataTypes';
-import axios from 'axios';
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import MainPage from 'components/MainPage/MainPage';
 import ReleasesPage from 'components/ReleasesPage/ReleasesPage';
 import CinemaPage from 'components/CinemaPage/CinemaPage';
 import SignIn from 'components/SignIn/SignIn';
+import ReleasesDataContext from 'context/ReleasesDataContext';
 import Page404 from './components/Page404/Page404';
 
 function App() {
-  const [data, setData] = useState<SingleReleaseDataType[]>([]);
-  const getData = async (link: string) => {
-    await axios
-      .get(link)
-      .then((response) => {
-        console.log(response.data);
-        setData(response.data);
-        console.log(data[0]);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-  useEffect(() => {
-    getData('https://yamaneko.fun/api/get_releases');
-  }, []);
-
-  // const releaseData: SingleReleaseDataType[] = JSON.parse(JSON.stringify(data));
+  const data = useContext(ReleasesDataContext);
 
   return (
     <div className="App">

@@ -17,6 +17,7 @@
     "paths": {
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
+      "context/*": ["context/*"],
       "data/*": ["data/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]

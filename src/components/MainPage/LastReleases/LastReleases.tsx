@@ -1,29 +1,12 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useContext } from 'react';
 import { SingleReleaseDataType } from 'types/dataTypes';
-import axios from 'axios';
 import './LastReleases.scss';
+import ReleasesDataContext from 'context/ReleasesDataContext';
 import LastReleasesBanner from './LastReleasesBanner/LastReleasesBanner';
 import LastReleasesRelease from './LastReleasesRelease/LastReleasesRelease';
 
 const LastReleases: FC = () => {
-  const [data, setData] = useState<SingleReleaseDataType[]>([]);
-  const getData = async (link: string) => {
-    await axios
-      .get(link)
-      .then((response) => {
-        console.log(response.data);
-        setData(response.data);
-        console.log(data[0]);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  useEffect(() => {
-    getData('https://yamaneko.fun/api/get_releases');
-  }, []);
-
+  const data = useContext(ReleasesDataContext);
   const fourElementsOfReleaseData: SingleReleaseDataType[] = data.slice(0, 4);
 
   return (

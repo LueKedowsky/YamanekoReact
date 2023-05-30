@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       assets: '/src/assets',
       components: '/src/components',
+      context: '/src/context',
       data: '/src/data',
       types: '/src/types',
       utils: '/src/utils',
