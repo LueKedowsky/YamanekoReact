@@ -29,9 +29,9 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <div className="header-container-sign-in">
-        <Link to="/sign-in">войти</Link>
-      </div>
+      <Link to="/sign-in" className="header-container-sign-in">
+        войти
+      </Link>
     </header>
   );
 };

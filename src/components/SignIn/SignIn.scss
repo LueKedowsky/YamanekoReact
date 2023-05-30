@@ -92,13 +92,12 @@
     align-items: center;
     justify-content: center;
     &_submit {
-      background: $pink-gradient;
-      text-align: center;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 30px;
       &-button {
-        background: transparent;
+        background: $pink-gradient;
+        text-align: center;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 30px;
         cursor: pointer;
         outline: none;
         border: none;

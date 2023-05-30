@@ -142,14 +142,12 @@ const SignIn: FC = () => {
                   )}
                 </div>
                 <div className="signIn-buttons">
-                  <div className="signIn-buttons_submit">
-                    <button
-                      className="signIn-buttons_submit-button"
-                      type="submit"
-                    >
-                      {regOrLogin}
-                    </button>
-                  </div>
+                  <button
+                    className="signIn-buttons_submit-button"
+                    type="submit"
+                  >
+                    {regOrLogin}
+                  </button>
                   <div className="signIn-buttons_switch">
                     <div className="signIn-buttons_switch-title">
                       {isRegister ? 'Уже есть аккаунт?' : 'Ещё нет аккаунта?'}
