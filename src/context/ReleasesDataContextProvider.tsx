@@ -4,22 +4,22 @@ import { SingleReleaseDataType } from 'types/dataTypes';
 import axios from 'axios';
 
 const ReleasesDataContextProvider: FC<any> = ({ children }) => {
-  const [data, setData] = useState<SingleReleaseDataType[]>([]);
-  const getData = async (link: string) => {
+  const [releasesData, setReleasesData] = useState<SingleReleaseDataType[]>([]);
+  const getReleasesData = async (requestDataLink: string) => {
     await axios
-      .get(link)
+      .get(requestDataLink)
       .then((response) => {
-        setData(response.data);
+        setReleasesData(response.data);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error, 'AXIOS REQUEST ERROR');
       });
   };
   useEffect(() => {
-    getData('https://yamaneko.fun/api/get_releases');
+    getReleasesData('https://yamaneko.fun/api/get_releases');
   }, []);
   return (
-    <ReleasesDataContext.Provider value={data}>
+    <ReleasesDataContext.Provider value={releasesData}>
       {children}
     </ReleasesDataContext.Provider>
   );
