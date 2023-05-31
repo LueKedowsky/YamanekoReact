@@ -48,18 +48,21 @@ const SignIn: FC = () => {
             }}
             validationSchema={Yup.object({
               nickName: isRegister
-                ? Yup.string().required('Это обязательное поле')
+                ? Yup.string().required('🠕 заполните поле выше 🠕')
                 : Yup.string(),
               email: Yup.string()
-                .email('Неверный e-mail адрес')
-                .required('Это обязательное поле'),
-              password: Yup.string().required('Это обязательное поле'),
+                .email('E-mail должен быть в формате "my@email.ru"')
+                .required('🠕 заполните поле выше 🠕'),
+              password: Yup.string()
+                .required('🠕 заполните поле выше 🠕')
+                .min(6, 'Введите минимум 6 символов пароля'),
               repeatPassword: isRegister
                 ? Yup.string()
-                    .required('Это обязательное поле')
+                    .required('🠕 заполните поле выше 🠕')
                     .oneOf([Yup.ref('password')], 'Пароли не совпадают')
                 : Yup.string(),
             })}
+            validateOnBlur={false}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               setTimeout(() => {
                 console.log(JSON.stringify(values, null, 2));
@@ -75,7 +78,11 @@ const SignIn: FC = () => {
                     <div className="signIn-fields_field">
                       <input
                         type="text"
-                        className="signIn-fields_field-input"
+                        className={
+                          formik.touched.nickName && formik.errors.nickName
+                            ? 'signIn-fields_field-input error'
+                            : 'signIn-fields_field-input'
+                        }
                         id="nickName"
                         placeholder="Имя пользователя"
                         onChange={formik.handleChange}
@@ -92,7 +99,11 @@ const SignIn: FC = () => {
                   <div className="signIn-fields_field">
                     <input
                       type="email"
-                      className="signIn-fields_field-input"
+                      className={
+                        formik.touched.email && formik.errors.email
+                          ? 'signIn-fields_field-input error'
+                          : 'signIn-fields_field-input'
+                      }
                       id="email"
                       placeholder="E-mail"
                       onChange={formik.handleChange}
@@ -108,7 +119,11 @@ const SignIn: FC = () => {
                   <div className="signIn-fields_field">
                     <input
                       type="password"
-                      className="signIn-fields_field-input"
+                      className={
+                        formik.touched.password && formik.errors.password
+                          ? 'signIn-fields_field-input error'
+                          : 'signIn-fields_field-input'
+                      }
                       id="password"
                       placeholder="Пароль"
                       onChange={formik.handleChange}
@@ -125,7 +140,12 @@ const SignIn: FC = () => {
                     <div className="signIn-fields_field">
                       <input
                         type="password"
-                        className="signIn-fields_field-input"
+                        className={
+                          formik.touched.repeatPassword &&
+                          formik.errors.repeatPassword
+                            ? 'signIn-fields_field-input error'
+                            : 'signIn-fields_field-input'
+                        }
                         id="repeatPassword"
                         placeholder="Повторите пароль"
                         onChange={formik.handleChange}
