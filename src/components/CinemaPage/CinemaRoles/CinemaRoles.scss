@@ -9,28 +9,40 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 5px 0;
     margin: 20px 0;
     &_role {
       &--img-wrap {
         position: relative;
+        text-align: center;
         &:hover .cinemaRoles-roles_role-description {
           visibility: visible;
           opacity: 1;
         }
+        &:hover .cinemaRoles-roles_role-img {
+          filter: blur(1px) grayscale(0.7);
+          transition: 0.5s;
+        }
+      }
+      &-name {
+        @extend %mulish24;
+        color: $yamaPink;
+        text-shadow: 2px 2px 5px grey;
       }
       &-description {
         position: absolute;
-        top: 0;
-        bottom: 0;
+        top: 30%;
         left: 0;
-        right: 0;
+        width: 100%;
+        height: 100%;
         text-align: center;
-        background: rgba(29, 106, 154, 0.72);
+        @extend %mulish24;
         color: #fff;
+        text-shadow: 2px 2px 3px $yamaPink;
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.2s, visibility 0.2s;
+        transition: opacity 0.4s, visibility 0.4s;
       }
     }
   }

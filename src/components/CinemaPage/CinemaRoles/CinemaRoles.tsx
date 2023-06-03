@@ -16,11 +16,15 @@ const CinemaRoles: React.FC<any> = ({ roles }) => {
                 alt=""
                 className="cinemaRoles-roles_role-img"
               />
-              <p className="cinemaRoles-roles_role-description">
-                Озвучил: {item.dubber}
-              </p>
+              <div className="cinemaRoles-roles_role--names-wrap">
+                <div className="cinemaRoles-roles_role-name">{item.name}</div>
+                <div className="cinemaRoles-roles_role-description">
+                  Озвучил
+                  <br />
+                  {item.dubber}
+                </div>
+              </div>
             </div>
-            <div className="cinemaRoles-roles_role-name">{item.name}</div>
           </div>
         ))}
       </div>

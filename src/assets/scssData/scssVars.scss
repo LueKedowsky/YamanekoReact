@@ -8,42 +8,49 @@ $pink-gradient: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
 // schematics
 
 %mulish14 {
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
 }
 
 %mulish16 {
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
 }
 
 %mulish20 {
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
 }
+%mulish24 {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+}
 %mulish60 {
-  font-family: "Mulish";
+  font-family: 'Mulish';
   font-style: normal;
   font-weight: 600;
   font-size: 60px;
 }
 
 %oswald24 {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-style: normal;
   font-weight: 675;
   font-size: 24px;
   line-height: 40px;
 }
 %oswald36 {
-  font-family: "Oswald";
+  font-family: 'Oswald';
   font-style: normal;
   font-weight: 675;
   font-size: 36px;
@@ -61,7 +68,7 @@ $pink-gradient: linear-gradient(274.27deg, #ff705f 11.62%, #cd3737 80.84%);
 }
 
 %logoStyles {
-  font-family: "Belgro";
+  font-family: 'Belgro';
   font-style: normal;
   font-weight: 900;
   font-size: 32px;
