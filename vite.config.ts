@@ -14,6 +14,7 @@ export default defineConfig({
       components: '/src/components',
       context: '/src/context',
       data: '/src/data',
+      tests: '/src/tests',
       types: '/src/types',
       utils: '/src/utils',
     },

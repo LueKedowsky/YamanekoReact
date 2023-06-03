@@ -29,12 +29,15 @@
   }
   &form-title {
     padding-top: 20px;
+    padding-bottom: -30px;
     @extend %mulish20;
   }
   &formik {
     &_error {
+      text-align: center;
+      max-width: 350px;
       color: $yamaPink;
-      padding-left: 20px;
+      margin-top: -6px;
     }
   }
   &overlay {
@@ -70,13 +73,13 @@
   &fields {
     &_field {
       &-input {
-        width: 250px;
+        width: 300px;
         height: 40px;
         outline: none;
         border: none;
         border-radius: 16px;
         padding-left: 20px;
-        margin: 10px;
+        margin: 8px;
         background: $dark-bg;
         color: #fff;
         @extend %mulish14;
@@ -91,9 +94,7 @@
     }
   }
   &buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flexCenter;
     &_submit {
       &-button {
         background: $pink-gradient;
@@ -125,12 +126,11 @@
   }
   &bottom {
     background: $pink-gradient;
-    padding: 10px 0;
     min-width: 100%;
     &_circle {
       @extend %flexCenter;
       margin: 0 auto;
-      margin-top: -30px;
+      margin-top: -24px;
       color: $yamaPink;
       background-color: #fff;
       border-radius: 60px;

@@ -36,6 +36,7 @@ const CinemaTrailer: FC<any> = ({
           controls={false}
           width="100%"
           height="100%"
+          data-testid="cinema-trailer"
         />
       </div>
     </div>

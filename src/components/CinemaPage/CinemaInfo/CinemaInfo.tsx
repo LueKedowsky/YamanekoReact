@@ -27,7 +27,9 @@ const CinemaInfo: React.FC<any> = ({ releaseDescription, screenshots }) => {
         </div>
         <div className="cinemaInfo-container--center">
           <div className="cinemaInfo-title">Синопсис</div>
-          <div className="cinemaInfo-description">{releaseDescription}</div>
+          <div className="cinemaInfo-description" role="contentinfo">
+            {releaseDescription}
+          </div>
         </div>
         <div className="cinemaInfo-container--right">
           <div className="cinemaInfo-screenshots">

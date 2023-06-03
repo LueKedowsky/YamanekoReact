@@ -51,7 +51,10 @@ const SignIn: FC = () => {
                 ? Yup.string().required('🠕 заполните поле выше 🠕')
                 : Yup.string(),
               email: Yup.string()
-                .email('E-mail должен быть в формате "my@email.ru"')
+                .matches(
+                  /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
+                  'E-mail должен быть в формате "my@email.ru"'
+                )
                 .required('🠕 заполните поле выше 🠕'),
               password: Yup.string()
                 .required('🠕 заполните поле выше 🠕')
@@ -94,6 +97,9 @@ const SignIn: FC = () => {
                           {formik.errors.nickName}
                         </div>
                       ) : null}
+                      {/* <div className="signIn-formik_error">
+                        {formik.errors.nickName}
+                      </div> */}
                     </div>
                   )}
                   <div className="signIn-fields_field">
