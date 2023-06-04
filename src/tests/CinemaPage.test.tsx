@@ -1,6 +1,5 @@
 import CinemaPage from 'components/CinemaPage/CinemaPage';
 import { render, screen } from '@testing-library/react';
-// import { describe, it } from 'vitest';
 
 test('Is CinemaPage are renders', () => {
   const data = {

@@ -97,9 +97,6 @@ const SignIn: FC = () => {
                           {formik.errors.nickName}
                         </div>
                       ) : null}
-                      {/* <div className="signIn-formik_error">
-                        {formik.errors.nickName}
-                      </div> */}
                     </div>
                   )}
                   <div className="signIn-fields_field">
