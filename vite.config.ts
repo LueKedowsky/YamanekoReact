@@ -4,6 +4,7 @@
 
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'node:path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
       components: '/src/components',
       context: '/src/context',
       data: '/src/data',
+      shared: path.resolve(__dirname, 'src/shared'),
       tests: '/src/tests',
       types: '/src/types',
       utils: '/src/utils',

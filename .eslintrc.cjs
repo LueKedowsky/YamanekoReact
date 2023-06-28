@@ -27,6 +27,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 0,
     'no-console': 0,
     'jsx-a11y/click-events-have-key-events': 0,
+    'import/prefer-default-export': 0,
   },
   ignorePatterns: ['**/*.js'],
 };
