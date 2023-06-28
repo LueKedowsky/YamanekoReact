@@ -15,10 +15,12 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
+      "api": ["api/*"],
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
       "context/*": ["context/*"],
       "data/*": ["data/*"],
+      "*": ["*"],
       "tests/*": ["tests/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]
@@ -30,10 +32,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "vite.config.ts",
-    ".eslintrc.cjs",
-    "src"
-  ],
+  "include": ["vite.config.ts", ".eslintrc.cjs", "src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

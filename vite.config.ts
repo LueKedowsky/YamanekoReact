@@ -10,10 +10,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      api: 'src/api',
       assets: '/src/assets',
       components: '/src/components',
       context: '/src/context',
       data: '/src/data',
+      shared: 'src/shared',
       tests: '/src/tests',
       types: '/src/types',
       utils: '/src/utils',
