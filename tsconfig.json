@@ -15,12 +15,11 @@
     "jsx": "react-jsx",
     "baseUrl": "src",
     "paths": {
-      "api": ["api/*"],
       "assets/*": ["assets/*"],
       "components/*": ["components/*"],
       "context/*": ["context/*"],
       "data/*": ["data/*"],
-      "*": ["*"],
+      "shared/*": ["shared/*"],
       "tests/*": ["tests/*"],
       "types/*": ["types/*"],
       "utils/*": ["utils/*"]
