@@ -1,12 +1,13 @@
 import { FC, useState, useEffect } from 'react';
 import ReleasesDataContext from 'context/ReleasesDataContext';
 import { SingleReleaseDataType } from 'types/dataTypes';
-import axios from 'axios';
+import { httpApi } from 'shared/api/httpApi';
+import { URL_GET_RELEASES } from 'shared/api/requestURL';
 
 const ReleasesDataContextProvider: FC<any> = ({ children }) => {
   const [releasesData, setReleasesData] = useState<SingleReleaseDataType[]>([]);
   const getReleasesData = async (requestUrl: string) => {
-    await axios
+    await httpApi
       .get(requestUrl)
       .then((response) => {
         setReleasesData(response.data);
@@ -17,7 +18,7 @@ const ReleasesDataContextProvider: FC<any> = ({ children }) => {
       });
   };
   useEffect(() => {
-    getReleasesData('https://yamaneko.fun/api/get_releases');
+    getReleasesData(URL_GET_RELEASES);
   }, []);
   return (
     <ReleasesDataContext.Provider value={releasesData}>
