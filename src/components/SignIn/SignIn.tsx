@@ -11,6 +11,7 @@ const SignIn: FC = () => {
   const switchClickHandler = () => {
     setIsRegister(!isRegister);
   };
+  const requiredField = '↑ заполните поле выше ↑';
 
   return (
     <div className="signIn-container">
@@ -48,20 +49,20 @@ const SignIn: FC = () => {
             }}
             validationSchema={Yup.object({
               nickName: isRegister
-                ? Yup.string().required('🠕 заполните поле выше 🠕')
+                ? Yup.string().required(requiredField)
                 : Yup.string(),
               email: Yup.string()
                 .matches(
                   /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
                   'E-mail должен быть в формате "my@email.ru"'
                 )
-                .required('🠕 заполните поле выше 🠕'),
+                .required(requiredField),
               password: Yup.string()
-                .required('🠕 заполните поле выше 🠕')
+                .required(requiredField)
                 .min(6, 'Введите минимум 6 символов пароля'),
               repeatPassword: isRegister
                 ? Yup.string()
-                    .required('🠕 заполните поле выше 🠕')
+                    .required(requiredField)
                     .oneOf([Yup.ref('password')], 'Пароли не совпадают')
                 : Yup.string(),
             })}
