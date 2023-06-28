@@ -5,14 +5,15 @@ import axios from 'axios';
 
 const ReleasesDataContextProvider: FC<any> = ({ children }) => {
   const [releasesData, setReleasesData] = useState<SingleReleaseDataType[]>([]);
-  const getReleasesData = async (requestDataLink: string) => {
+  const getReleasesData = async (requestUrl: string) => {
     await axios
-      .get(requestDataLink)
+      .get(requestUrl)
       .then((response) => {
         setReleasesData(response.data);
       })
       .catch((error) => {
         console.log(error, 'AXIOS REQUEST ERROR');
+        throw error;
       });
   };
   useEffect(() => {
