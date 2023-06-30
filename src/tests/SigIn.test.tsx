@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import SignIn from 'components/SignIn/SignIn';
+import SignIn from 'pages/SignIn/SignIn';
 
 test('Check to empty fields render error on submit', () => {
   render(<SignIn />);

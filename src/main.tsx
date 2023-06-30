@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
 import ScrollToTop from 'utils/ScrollToTop';
 import ReleasesDataContextProvider from 'context/ReleasesDataContextProvider';
-import App from './App';
+import App from './app/App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

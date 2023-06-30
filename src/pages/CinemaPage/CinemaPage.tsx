@@ -1,8 +1,8 @@
 import { FC, RefObject, useRef } from 'react';
-import CinemaTrailer from './CinemaTrailer/CinemaTrailer';
-import CinemaPlayer from './CinemaPlayer/CinemaPlayer';
-import CinemaInfo from './CinemaInfo/CinemaInfo';
-import CinemaRoles from './CinemaRoles/CinemaRoles';
+import CinemaTrailer from 'widgets/CinemaTrailer/CinemaTrailer';
+import CinemaPlayer from 'widgets/CinemaPlayer/CinemaPlayer';
+import CinemaInfo from 'widgets/CinemaInfo/CinemaInfo';
+import CinemaRoles from 'widgets/CinemaRoles/CinemaRoles';
 
 const CinemaPage: FC<any> = ({
   itemId,

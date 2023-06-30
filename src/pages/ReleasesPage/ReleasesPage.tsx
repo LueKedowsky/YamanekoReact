@@ -2,7 +2,7 @@ import { FC, useContext } from 'react';
 import releasesBanner from 'assets/icons/releases.png';
 import './ReleasesPage.scss';
 import ReleasesDataContext from 'context/ReleasesDataContext';
-import SingleRelease from './SingleRelease/SingleRelease';
+import SingleRelease from 'widgets/SingleRelease/SingleRelease';
 
 const ReleasesPage: FC = () => {
   const data = useContext(ReleasesDataContext);
