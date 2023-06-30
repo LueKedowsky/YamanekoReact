@@ -19,6 +19,7 @@
       "assets/*": ["shared/assets/*"],
       "context/*": ["entities/context/*"],
       "entities/*": ["entities/*"],
+      "features/*": ["features/*"],
       "helpers": ["shared/helpers"],
       "pages/*": ["pages/*"],
       "shared/*": ["shared/*"],
