@@ -1,6 +1,6 @@
 import './MainPage.scss';
-import LastReleases from './LastReleases/LastReleases';
-import NewsBlock from './NewsBlock/NewsBlock';
+import LastReleases from '../../widgets/LastReleases/LastReleases';
+import NewsBlock from '../../widgets/NewsBlock/NewsBlock';
 
 const MainPage = () => {
   return (

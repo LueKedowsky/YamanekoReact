@@ -11,14 +11,17 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      assets: '/src/assets',
+      api: path.resolve(__dirname, 'src/shared/api'),
+      assets: '/src/shared/assets',
       components: '/src/components',
       context: '/src/context',
-      data: '/src/data',
+      data: '/src/shared/data',
+      helpers: '/src/shared/helpers',
       shared: path.resolve(__dirname, 'src/shared'),
       tests: '/src/tests',
-      types: '/src/types',
-      utils: '/src/utils',
+      types: '/src/shared/types',
+      utils: '/src/shared/utils',
+      widgets: '/src/widgets',
     },
   },
   test: {
