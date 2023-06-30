@@ -7,7 +7,7 @@ import ReleasesPage from 'pages/ReleasesPage/ReleasesPage';
 import CinemaPage from 'pages/CinemaPage/CinemaPage';
 import SignIn from 'pages/SignIn/SignIn';
 import ReleasesDataContext from 'context/ReleasesDataContext';
-import Page404 from '../pages/Page404/Page404';
+import Page404 from 'pages/Page404/Page404';
 
 function App() {
   const data = useContext(ReleasesDataContext);
