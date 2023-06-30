@@ -1,4 +1,4 @@
-import CinemaPage from 'components/CinemaPage/CinemaPage';
+import CinemaPage from 'pages/CinemaPage/CinemaPage';
 import { render, screen } from '@testing-library/react';
 
 test('Is CinemaPage are renders', () => {

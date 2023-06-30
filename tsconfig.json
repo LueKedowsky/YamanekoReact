@@ -17,10 +17,10 @@
     "paths": {
       "api/*": ["shared/api/*"],
       "assets/*": ["shared/assets/*"],
-      "components/*": ["components/*"],
-      "context/*": ["context/*"],
-      "data/*": ["shared/data/*"],
+      "context/*": ["entities/context/*"],
+      "entities/*": ["entities/*"],
       "helpers": ["shared/helpers"],
+      "pages/*": ["pages/*"],
       "shared/*": ["shared/*"],
       "tests/*": ["tests/*"],
       "types/*": ["shared/types/*"],

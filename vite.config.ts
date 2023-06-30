@@ -13,10 +13,10 @@ export default defineConfig({
     alias: {
       api: path.resolve(__dirname, 'src/shared/api'),
       assets: '/src/shared/assets',
-      components: '/src/components',
-      context: '/src/context',
-      data: '/src/shared/data',
+      context: '/src/entities/context',
+      entities: 'src/entities',
       helpers: '/src/shared/helpers',
+      pages: '/src/pages',
       shared: path.resolve(__dirname, 'src/shared'),
       tests: '/src/tests',
       types: '/src/shared/types',
