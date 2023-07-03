@@ -57,20 +57,27 @@ const Header: React.FC = () => {
         <div className="header-container-hamburger_icon" />
       </div>
       {isMenuOpen && (
-        <div className="header-container-modal">
+        <div
+          className="header-container-modal"
+          onClick={clickHandler}
+          role="button"
+          tabIndex={0}
+        >
           <div className="header-container-modal__item">
-            <Link to="/">ddd</Link>
+            <Link to="/sign-in" className="header-container-modal__sign-in">
+              Войти
+            </Link>
           </div>
           <div className="header-container-modal__item">
-            <ul>
-              <li>
-                <NavLink to="/">aaa</NavLink>
+            <ul className="header-container-modal-navigation__ul">
+              <li className="header-container-modal-navigation__li">
+                <NavLink to="/project">Проект</NavLink>
               </li>
-              <li>
-                <NavLink to="/">aaa</NavLink>
+              <li className="header-container-modal-navigation__li">
+                <NavLink to="/releases">Релизы</NavLink>
               </li>
-              <li>
-                <NavLink to="/">aaa</NavLink>
+              <li className="header-container-modal-navigation__li">
+                <NavLink to="/support">Поддержка</NavLink>
               </li>
             </ul>
           </div>
