@@ -4,14 +4,6 @@ import { useState } from 'react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const onMouseEnterHandler = () => {
-    console.log('MOUSE ENTER');
-    setIsMenuOpen(true);
-  };
-  const onMouseleaveHandler = () => {
-    console.log('MOUSE LEAVE');
-    setIsMenuOpen(false);
-  };
   const clickHandler = () => {
     setIsMenuOpen(!isMenuOpen);
   };
