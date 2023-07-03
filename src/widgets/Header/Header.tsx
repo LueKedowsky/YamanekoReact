@@ -1,11 +1,15 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
+import { useEffect, useState } from 'react';
 
 const Header: React.FC = () => {
   return (
     <header className="header-container">
-      <div className="header-container-logo">
+      <div className="header-container-logo logo__large">
         <Link to="/">YAMANEKO</Link>
+      </div>
+      <div className="header-container-logo logo__small">
+        <Link to="/">Y</Link>
       </div>
       <div className="header-container-search">
         <input
