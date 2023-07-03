@@ -98,6 +98,7 @@
   @extend %linkClear;
   &-hamburger {
     @media screen and (max-width: 1199px) {
+      z-index: 2;
       color: $pink-gradient;
       position: absolute;
       top: 50%;
@@ -118,15 +119,27 @@
         margin: 7px 0;
         transition: 0.5s;
       }
-      &:hover:before {
+      &.active:before {
         transform: translateY(12px) rotate(135deg);
       }
-      &:hover:after {
+      &.active:after {
         transform: translateY(-12px) rotate(-135deg);
       }
-      &:hover &_icon {
+      &.active &_icon {
         transform: scale(0);
       }
     }
+  }
+  &-modal {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 30px;
+    width: 200px;
+    height: 100vh;
+    background-color: $dark-bg;
+    display: flex;
+    flex-direction: column;
   }
 }

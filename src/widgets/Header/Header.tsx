@@ -1,7 +1,20 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
+import { useState } from 'react';
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const onMouseEnterHandler = () => {
+    console.log('MOUSE ENTER');
+    setIsMenuOpen(true);
+  };
+  const onMouseleaveHandler = () => {
+    console.log('MOUSE LEAVE');
+    setIsMenuOpen(false);
+  };
+  const clickHandler = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <header className="header-container">
       <div className="header-container-logo logo__large">
@@ -35,9 +48,34 @@ const Header: React.FC = () => {
       <Link to="/sign-in" className="header-container-sign-in">
         войти
       </Link>
-      <div className="header-container-hamburger">
+      <div
+        className={`header-container-hamburger${isMenuOpen ? ' active' : ''}`}
+        role="menu"
+        tabIndex={0}
+        onClick={clickHandler}
+      >
         <div className="header-container-hamburger_icon" />
       </div>
+      {isMenuOpen && (
+        <div className="header-container-modal">
+          <div className="header-container-modal__item">
+            <Link to="/">ddd</Link>
+          </div>
+          <div className="header-container-modal__item">
+            <ul>
+              <li>
+                <NavLink to="/">aaa</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">aaa</NavLink>
+              </li>
+              <li>
+                <NavLink to="/">aaa</NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
