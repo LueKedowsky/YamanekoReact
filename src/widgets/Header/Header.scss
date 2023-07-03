@@ -25,6 +25,10 @@
     @extend %logoStyles;
     @extend %linkClear;
     margin: 0 30px;
+    transition: 0.5s;
+    &:hover {
+      text-shadow: 3px 1px 1px $yamaPink;
+    }
   }
   &-search {
     &__input {
