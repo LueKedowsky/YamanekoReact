@@ -3,23 +3,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    min-height: 100vh;
     color: black;
     background-color: #efefef;
   }
   &header1 {
-    font-family: "Oswald";
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: 675;
     font-size: 130px;
+    margin: 20px 0;
   }
   &header3 {
-    font-family: "Oswald";
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: 675;
     font-size: 30px;
   }
-  &img {
+  &cat {
     margin: 30px;
   }
 }
