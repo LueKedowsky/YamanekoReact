@@ -32,6 +32,9 @@ const Header: React.FC = () => {
       <Link to="/sign-in" className="header-container-sign-in">
         войти
       </Link>
+      <div className="header-container-hamburger">
+        <div className="header-container-hamburger_icon" />
+      </div>
     </header>
   );
 };
