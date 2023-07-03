@@ -1,6 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
 import './Header.scss';
-import { useEffect, useState } from 'react';
 
 const Header: React.FC = () => {
   return (
