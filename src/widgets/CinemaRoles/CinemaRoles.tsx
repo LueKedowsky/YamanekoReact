@@ -6,7 +6,7 @@ import { RolesType } from 'types/dataTypes';
 const CinemaRoles: React.FC<any> = ({ roles }) => {
   return (
     <div className="cinemaRoles-container">
-      <img src={rolesBanner} alt="" className="cinemaRoles-banner" />
+      <img className="cinemaRoles-banner" src={rolesBanner} alt="" />
       <div className="cinemaRoles-roles">
         {roles.map((item: RolesType) => (
           <div className="cinemaRoles-roles_role" key={item.name}>

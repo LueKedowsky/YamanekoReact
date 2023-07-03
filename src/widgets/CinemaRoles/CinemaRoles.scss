@@ -5,6 +5,9 @@
     max-width: 1300px;
     margin: 0 auto;
   }
+  &banner {
+    max-height: 200px;
+  }
   &roles {
     display: flex;
     align-items: center;
@@ -21,14 +24,13 @@
           opacity: 1;
         }
         &:hover .cinemaRoles-roles_role-img {
-          filter: blur(1px) grayscale(0.7);
+          filter: blur(1px) grayscale(0.7) brightness(0.5);
           transition: 0.5s;
         }
       }
       &-name {
         @extend %mulish24;
-        color: $yamaPink;
-        text-shadow: 2px 2px 5px grey;
+        color: #0e0e0e;
       }
       &-description {
         position: absolute;
@@ -39,7 +41,7 @@
         text-align: center;
         @extend %mulish24;
         color: #fff;
-        text-shadow: 2px 2px 3px $yamaPink;
+        // text-shadow: 2px 2px 3px white;
         visibility: hidden;
         opacity: 0;
         transition: opacity 0.4s, visibility 0.4s;
