@@ -2,13 +2,14 @@
 
 .releasesBanner- {
   &container {
-    max-width: 1300px;
     margin-top: 20px;
-    margin-left: 10vw;
+    margin: 0 auto;
   }
   &banner {
     &_img {
-      max-width: 80vw;
+      width: 80vw;
+      display: block;
+      margin: 0 auto;
     }
   }
 }

@@ -5,7 +5,7 @@ import newsBanner from 'assets/icons/news.png';
 const NewsBlock: FC = () => {
   return (
     <div className="newsBlock-container">
-      <img src={newsBanner} alt="" className="news-banner" />
+      <img src={newsBanner} alt="" className="newsBlock-banner" />
       <div className="newsBlock-news">
         <div className="newsBlock-news--left">
           <div className="newsBlock-news_item first-news">News block 1</div>

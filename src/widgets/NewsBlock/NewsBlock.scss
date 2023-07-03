@@ -2,27 +2,55 @@
 
 .newsBlock- {
   &container {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    @media screen and (max-width: 1200px) {
+      width: 940px;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 720px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 440px;
+    }
+    @media screen and (max-width: 480px) {
+      width: 320px;
+    }
+  }
+  &banner {
+    @media screen and (max-width: 1200px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 200px;
+    }
   }
   &news {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 300px 300px;
+    gap: 10px;
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: 1fr 200px 200px;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
     .first-news {
-      width: 600px;
       height: 400px;
     }
     .second-news {
-      width: 340px;
       height: 190px;
       &:nth-child(1) {
         margin-bottom: 20px;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 10px;
+        }
       }
     }
     .third-news {
-      width: 300px;
       height: 400px;
     }
     &_item {
