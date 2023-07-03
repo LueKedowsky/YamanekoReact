@@ -6,16 +6,16 @@
     margin: 0 auto;
     padding: 20px;
     @media screen and (max-width: 1200px) {
-      width: 1000px;
+      width: 940px;
     }
     @media screen and (max-width: 1000px) {
-      width: 768px;
+      width: 720px;
     }
     @media screen and (max-width: 768px) {
-      width: 480px;
+      width: 440px;
     }
     @media screen and (max-width: 480px) {
-      width: 350px;
+      width: 320px;
     }
   }
   &banner {
@@ -27,7 +27,6 @@
     }
   }
   &news {
-    // width: 1200px;
     height: 100%;
     margin: auto;
     display: grid;
@@ -39,21 +38,21 @@
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
     }
-    // .first-news {
-    //   width: 600px;
-    //   height: 400px;
-    // }
-    // .second-news {
-    //   width: 340px;
-    //   height: 190px;
-    //   &:nth-child(1) {
-    //     margin-bottom: 20px;
-    //   }
-    // }
-    // .third-news {
-    //   width: 300px;
-    //   height: 400px;
-    // }
+    .first-news {
+      height: 400px;
+    }
+    .second-news {
+      height: 190px;
+      &:nth-child(1) {
+        margin-bottom: 20px;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .third-news {
+      height: 400px;
+    }
     &_item {
       background-color: $light-bg;
     }
