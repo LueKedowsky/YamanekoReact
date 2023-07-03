@@ -1,10 +1,12 @@
 @import 'assets/scssData/scssVars.scss';
 
 .header-container {
+  position: relative;
   position: sticky;
   top: 0px;
   z-index: 999;
-  background: black;
+  background: #0e0e0e;
+  max-width: 100vw;
 
   @extend %mulish20;
   color: #f6f6f6;
@@ -14,12 +16,7 @@
   justify-content: space-between;
   align-items: center;
   justify-self: auto;
-
   height: 75px;
-  // padding-left: 32px;
-  // padding-right: 32px;
-  // padding-top: 16px;
-  // padding-bottom: 16px;
 
   &-logo {
     @extend %logoStyles;
@@ -30,16 +27,35 @@
       text-shadow: 3px 1px 1px $yamaPink;
     }
   }
+  .logo__ {
+    &large {
+      @media screen and (max-width: 768px) {
+        display: none;
+        margin: 0 0 0 20px;
+      }
+    }
+    &small {
+      display: none;
+      @media screen and (max-width: 768px) {
+        margin: 0 0 0 20px;
+        display: block;
+      }
+    }
+  }
   &-search {
+    margin: 0 auto;
     &__input {
+      background-color: #2f2f2f;
       background-image: url('assets/icons/lupa.svg');
       background-repeat: no-repeat;
       background-position-x: 10px;
       background-position-y: center;
+      color: #7d7d7d;
       height: 40px;
-      width: 400px;
+      width: 320px;
       padding-left: 40px;
-      border-radius: 2px;
+      border-radius: 5px;
+      margin-left: -40px;
       font-size: 16px;
       border: none;
       text-decoration: none;
@@ -50,25 +66,97 @@
         outline: none;
         text-decoration: none;
       }
+      @media screen and (max-width: 480px) {
+        width: 200px;
+      }
     }
   }
-  &-navigation__ {
-    &ul {
+  &-navigation {
+    margin: 0 auto;
+    &__ul {
       padding: 20px;
       @extend %linkClear;
     }
-    &li {
+    &__li {
       display: inline-block;
       padding: 20px;
+    }
+    @media screen and (max-width: 1199px) {
+      display: none;
     }
   }
   &-sign-in {
     height: 30px;
     padding: 5px 20px;
     margin-right: 30px;
-
     background: $pink-gradient;
     border-radius: 13px;
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
   }
   @extend %linkClear;
+  &-hamburger {
+    @media screen and (max-width: 1199px) {
+      z-index: 2;
+      color: $pink-gradient;
+      position: absolute;
+      top: 50%;
+      left: 95%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      @media screen and (max-width: 768px) {
+        left: 90%;
+      }
+      &:before,
+      &:after,
+      &_icon {
+        background: $pink-gradient;
+        content: '';
+        display: block;
+        height: 6px;
+        border-radius: 3px;
+        margin: 7px 0;
+        transition: 0.5s;
+      }
+      &.active:before {
+        transform: translateY(12px) rotate(135deg);
+      }
+      &.active:after {
+        transform: translateY(-12px) rotate(-135deg);
+      }
+      &.active &_icon {
+        transform: scale(0);
+      }
+    }
+  }
+  &-modal {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    padding: 30px;
+    width: 200px;
+    height: 100vh;
+    background-color: #0e0e0e;
+    display: flex;
+    flex-direction: column;
+    &__sign-in {
+      height: 30px;
+      padding: 5px 20px;
+      margin-right: 30px;
+      background: $pink-gradient;
+      border-radius: 13px;
+    }
+    &-navigation {
+      &__ul {
+        padding: 20px;
+        @extend %linkClear;
+      }
+      &__li {
+        display: inline-block;
+        padding: 20px;
+      }
+    }
+  }
 }

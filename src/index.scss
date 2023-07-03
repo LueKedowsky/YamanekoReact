@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: Belgro;
-  src: url(assets/fonts/Belgro.woff);
+  src: url(shared/assets/fonts/Belgro.woff);
 }
 
 @font-face {
   font-family: Comfortaa;
-  src: url(assets/fonts/Comfortaa.woff);
+  src: url(shared/assets/fonts/Comfortaa.woff);
 }
 
 body {
@@ -22,6 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 code {
