@@ -2,7 +2,6 @@ import { FC, useContext } from 'react';
 import { SingleReleaseDataType } from 'types/dataTypes';
 import './LastReleases.scss';
 import ReleasesDataContext from 'context/ReleasesDataContext';
-import LastReleasesBanner from './LastReleasesBanner/LastReleasesBanner';
 import LastReleasesRelease from './LastReleasesRelease/LastReleasesRelease';
 
 const LastReleases: FC = () => {
@@ -25,7 +24,6 @@ const LastReleases: FC = () => {
             )
           )}
         </div>
-        <LastReleasesBanner />
       </div>
     </div>
   );
