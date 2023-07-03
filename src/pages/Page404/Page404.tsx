@@ -6,7 +6,7 @@ function Page404() {
     <div className="page404-container">
       <h1 className="page404-header1">404</h1>
       <h3 className="page404-header3">Страница не найдена!</h3>
-      <img className="page404-img" src={cat404} alt="" />
+      <img className="page404-cat" src={cat404} alt="" />
     </div>
   );
 }
