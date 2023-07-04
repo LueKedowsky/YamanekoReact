@@ -37,6 +37,7 @@ const SingleRelease: FC<SingleReleaseDataType> = ({
           ))}
         </div>
         <div className="single-release-description">{releaseDescription}</div>
+        <hr className="single-release-divider" />
       </div>
     </div>
   );

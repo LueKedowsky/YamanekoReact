@@ -3,6 +3,11 @@
 .releases- {
   &container {
     background-color: $dark-bg;
+    padding: 10px;
+    &--inner {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
     &-main {
       display: flex;
       flex-direction: column;
@@ -11,6 +16,12 @@
     }
   }
   &banner {
-    padding: 20px 450px;
+    text-align: center;
+    padding: 20px 0;
+    &__img {
+      @media screen and (max-width: 768px) {
+        max-width: 75%;
+      }
+    }
   }
 }
