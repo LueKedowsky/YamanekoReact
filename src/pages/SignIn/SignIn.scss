@@ -10,11 +10,11 @@
     &--inner {
       @extend %flexCenter;
       flex-direction: column;
-      max-width: 50vw;
+      width: 500px;
       margin: 0 auto;
       background-color: #1c1c1c;
       @media screen and (max-width: 1000px) {
-        min-width: 360px;
+        width: 360px;
       }
     }
   }
