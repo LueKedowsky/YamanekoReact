@@ -24,10 +24,5 @@
     align-items: flex-start;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    @media screen and (max-width: 1000px) {
-      // flex-direction: column;
-      // align-items: center;
-      // justify-content: center;
-    }
   }
 }
