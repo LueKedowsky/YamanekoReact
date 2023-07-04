@@ -13,6 +13,11 @@
     color: white;
     margin-left: 74px;
     margin-bottom: 30px;
+    @media screen and (max-width: 1000px) {
+      text-align: center;
+      margin: 0;
+      padding: 15px;
+    }
   }
   &releases {
     display: flex;
