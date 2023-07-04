@@ -13,11 +13,21 @@
     color: white;
     margin-left: 74px;
     margin-bottom: 30px;
+    @media screen and (max-width: 1000px) {
+      text-align: center;
+      margin: 0;
+      padding: 15px;
+    }
   }
   &releases {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    @media screen and (max-width: 1000px) {
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: center;
+    }
   }
 }
