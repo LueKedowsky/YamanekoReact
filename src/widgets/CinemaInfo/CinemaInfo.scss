@@ -4,42 +4,104 @@
   &container {
     max-width: 1300px;
     margin: auto;
+    &--left {
+      display: flex;
+      flex-direction: column;
+      margin-right: 5px;
+      @media screen and (max-width: 1200px) {
+        flex-direction: row;
+      }
+      @media screen and (max-width: 480px) {
+        flex-direction: row;
+        margin-right: 0;
+      }
+    }
+    &--center {
+      margin: 20px 5px;
+    }
+    &--right {
+      margin-right: 20px;
+    }
+  }
+  &banner {
+    max-width: 80vw;
+    display: block;
+    margin: 0 auto;
   }
   &flexcontainer {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5px 20px;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &switchers {
-    &.active {
-      background: $yamaPink;
+    margin: 20px 0;
+    width: 72px;
+    height: 72px;
+    @media screen and (max-width: 1200px) {
+      margin: 10px 40px;
     }
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    @media screen and (max-width: 480px) {
+      width: 52px;
+      height: 52px;
+      margin: 10px 20px;
+    }
     &_img {
       width: 50px;
       height: 50px;
       padding: 10px;
       cursor: pointer;
       border: 1px solid black;
+      @media screen and (max-width: 480px) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &.active {
+      background-color: $yamaPink;
     }
   }
   &title {
     @extend %oswald36;
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
   }
   &description {
     @extend %mulish14;
     max-width: 600px;
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 480px) {
+      max-width: 350px;
+    }
   }
   &screenshots {
+    margin-top: 20px;
     &_screenshot {
       width: 480px;
       height: 250px;
+      box-shadow: 10px 10px 0px 0px #383838;
       -webkit-box-shadow: 10px 10px 0px 0px #383838;
       -moz-box-shadow: 10px 10px 0px 0px #383838;
-      box-shadow: 10px 10px 0px 0px #383838;
+      @media screen and (max-width: 1300px) {
+        width: 450px;
+        height: 230px;
+      }
+      @media screen and (max-width: 550px) {
+        width: 300px;
+        height: 170px;
+        box-shadow: 5px 5px 0px 0px #383838;
+        -webkit-box-shadow: 5px 5px 0px 0px #383838;
+        -moz-box-shadow: 5px 5px 0px 0px #383838;
+      }
     }
   }
 }

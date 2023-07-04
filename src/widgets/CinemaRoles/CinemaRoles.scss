@@ -6,7 +6,8 @@
     margin: 0 auto;
   }
   &banner {
-    max-height: 200px;
+    max-height: 20vw;
+    padding: 20px;
   }
   &roles {
     display: flex;
@@ -15,6 +16,9 @@
     flex-wrap: wrap;
     padding: 5px 0;
     margin: 20px 0;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     &_role {
       &--img-wrap {
         position: relative;
@@ -44,6 +48,9 @@
         visibility: hidden;
         opacity: 0;
         transition: opacity 0.4s, visibility 0.4s;
+      }
+      @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
       }
     }
   }
