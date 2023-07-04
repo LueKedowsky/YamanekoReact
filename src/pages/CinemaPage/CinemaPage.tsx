@@ -30,7 +30,7 @@ const CinemaPage: FC<any> = ({
   const toPlayerRef: RefObject<null> = useRef(null);
 
   return (
-    <div>
+    <>
       <CinemaTrailer
         releaseTrailer={releaseTrailer}
         releaseTitleRu={releaseTitleRu}
@@ -42,7 +42,7 @@ const CinemaPage: FC<any> = ({
         screenshots={screenshots}
       />
       <CinemaRoles roles={roles} />
-    </div>
+    </>
   );
 };
 
