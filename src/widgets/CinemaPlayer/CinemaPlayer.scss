@@ -24,34 +24,34 @@
       height: 50%;
       margin: 0 auto;
       padding: 20px;
-      &::before {
-        content: 'YAMANEKO';
-        position: absolute;
-        top: 260px;
-        left: 100px;
-        transform: rotate(270deg);
+      // &::before {
+      //   content: 'YAMANEKO';
+      //   position: absolute;
+      //   top: 260px;
+      //   left: 100px;
+      //   transform: rotate(270deg);
 
-        font-family: 'Belgro';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 60px;
+      //   font-family: 'Belgro';
+      //   font-style: normal;
+      //   font-weight: 900;
+      //   font-size: 60px;
 
-        color: #f6f6f62b;
-      }
-      &::after {
-        content: 'YAMANEKO';
-        position: absolute;
-        top: 260px;
-        right: 100px;
-        transform: rotate(90deg);
+      //   color: #f6f6f62b;
+      // }
+      // &::after {
+      //   content: 'YAMANEKO';
+      //   position: absolute;
+      //   top: 260px;
+      //   right: 100px;
+      //   transform: rotate(90deg);
 
-        font-family: 'Belgro';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 64px;
+      //   font-family: 'Belgro';
+      //   font-style: normal;
+      //   font-weight: 900;
+      //   font-size: 64px;
 
-        color: #ffffff;
-      }
+      //   color: #ffffff;
+      // }
     }
   }
 }
