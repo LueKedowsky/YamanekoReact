@@ -5,87 +5,62 @@
     color: #fff;
     @extend %mulish16;
     background-color: #111;
-    min-height: 700px;
+    padding-top: 50px;
+    padding-bottom: 100vh;
     &--inner {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      max-width: 1300px;
-      margin: 0 auto;
-      padding-top: 50px;
-    }
-    &--left {
-      position: relative;
-    }
-    &--right {
-      min-height: 501px;
-      width: 400px;
-      background-color: #1c1c1c;
-      display: flex;
+      @extend %flexCenter;
       flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+      max-width: 50vw;
+      margin: 0 auto;
+      background-color: #1c1c1c;
+      @media screen and (max-width: 1000px) {
+        min-width: 360px;
+      }
     }
   }
   &form-title {
-    padding-top: 20px;
-    padding-bottom: -30px;
     @extend %mulish20;
+    padding: 20px;
+    text-align: center;
+    width: 350px;
   }
   &formik {
     &_error {
       text-align: center;
+      margin: 15px;
       max-width: 350px;
+      max-height: 30px;
       color: $yamaPink;
-      margin-top: -6px;
     }
-  }
-  &overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    max-width: 1000px;
-    @extend %flexCenter;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.72);
-    &_title {
-      @extend %mulish60;
-      color: #fff;
-      margin-top: -200px;
-      margin-bottom: 50px;
-      text-shadow: 5px 5px 3px #121212;
+    &_empty {
+      min-height: 40px;
     }
-    &_subtitle {
-      @extend %mulish14;
-      text-shadow: 3px 3px 2px #232323;
-      color: grey;
-    }
-  }
-
-  &video {
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
   }
   &fields {
+    @extend %flexCenter;
+    flex-direction: column;
     &_field {
+      width: 350px;
+      @extend %flexCenter;
+      flex-direction: column;
       &-input {
+        // margin: 10px;
         width: 300px;
         height: 40px;
         outline: none;
         border: none;
         border-radius: 16px;
         padding-left: 20px;
-        margin: 8px;
         background: $dark-bg;
         color: #fff;
         @extend %mulish14;
         &:focus,
         &::placeholder {
           color: #fff;
+        }
+        @media screen and (max-width: 768px) {
+          width: 200px;
+          height: 35px;
         }
       }
       .error {
@@ -95,6 +70,10 @@
   }
   &buttons {
     @extend %flexCenter;
+    margin-bottom: 25px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     &_submit {
       &-button {
         background: $pink-gradient;
@@ -108,12 +87,18 @@
         @extend %mulish16;
         font-weight: bold;
         color: #fff;
+        @media screen and (max-width: 768px) {
+          margin: 10px 0;
+        }
       }
     }
     &_switch {
       @extend %flexCenter;
       flex-direction: column;
       margin-left: 20px;
+      @media screen and (max-width: 768px) {
+        margin: 10px 0;
+      }
       &-title {
         @extend %mulish14;
         color: grey;
@@ -142,7 +127,7 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      margin: 0 auto;
+      margin: 10px auto;
       &-item {
         @extend %flexCenter;
         cursor: pointer;
