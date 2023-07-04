@@ -7,9 +7,12 @@
   }
   &banner {
     &_img {
-      width: 80vw;
+      width: 1200px;
       display: block;
       margin: 0 auto;
+      @media screen and (max-width: 1300px) {
+        width: 80vw;
+      }
     }
   }
 }
