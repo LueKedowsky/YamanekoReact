@@ -16,3 +16,8 @@ export type RolesType = {
   picture: string;
   dubber: string;
 };
+
+export type CinemaInfoProps = {
+  releaseDescription: string;
+  screenshots: string[];
+};
