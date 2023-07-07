@@ -117,7 +117,7 @@
         height: 6px;
         border-radius: 3px;
         margin: 7px 0;
-        transition: 0.5s;
+        transition: 0.7s;
       }
       &.active:before {
         transform: translateY(12px) rotate(135deg);
@@ -131,10 +131,11 @@
     }
   }
   &-modal {
-    z-index: 1;
     position: absolute;
+    z-index: -1;
     top: 0%;
-    right: 0%;
+    right: -100%;
+    transition: 0.9s;
     width: 250px;
     height: 100vh;
     background-color: $black-bg;
@@ -142,6 +143,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    &.opened {
+      transition: 0.5s;
+      z-index: 1;
+      top: 0%;
+      right: 0%;
+    }
     &__item {
       margin-top: 28px;
     }
