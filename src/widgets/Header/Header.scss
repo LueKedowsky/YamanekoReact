@@ -23,8 +23,15 @@
     @extend %linkClear;
     margin: 0 30px;
     transition: 0.5s;
-    &:hover {
-      text-shadow: 3px 1px 1px $yamaPink;
+    @media (hover: hover) {
+      &:hover {
+        text-shadow: 3px 1px 1px $yamaPink;
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        text-shadow: 3px 1px 1px $yamaPink;
+      }
     }
   }
   .logo__ {
@@ -131,17 +138,21 @@
     }
   }
   &-modal {
-    display: none;
     position: absolute;
+    overflow: hidden;
     z-index: -1;
     top: 0%;
-    right: 0%;
-    transition: 0.9s;
+    left: 0%;
+    transition: 0.5s;
     opacity: 0;
-    width: 250px;
+    width: 0px;
     height: 100vh;
     background-color: $black-bg;
     &.opened {
+      right: 0%;
+      left: auto;
+      width: 250px;
+      height: 100vh;
       transition: 0.5s;
       opacity: 1;
       z-index: 1;
